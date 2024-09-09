@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/default/Baccarat/src/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+  "file": "/home/default/Baccarat/src/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/Context.cpp.o -c /home/default/Baccarat/src/Context.cpp",
+  "file": "/home/default/Baccarat/src/Context.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/Dealer.cpp.o -c /home/default/Baccarat/src/Dealer.cpp",
+  "file": "/home/default/Baccarat/src/Dealer.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/Game.cpp.o -c /home/default/Baccarat/src/Game.cpp",
+  "file": "/home/default/Baccarat/src/Game.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/MsgParser.cpp.o -c /home/default/Baccarat/src/MsgParser.cpp",
+  "file": "/home/default/Baccarat/src/MsgParser.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/NetworkMgr.cpp.o -c /home/default/Baccarat/src/NetworkMgr.cpp",
+  "file": "/home/default/Baccarat/src/NetworkMgr.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/State.cpp.o -c /home/default/Baccarat/src/State.cpp",
+  "file": "/home/default/Baccarat/src/State.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/StateMachine.cpp.o -c /home/default/Baccarat/src/StateMachine.cpp",
+  "file": "/home/default/Baccarat/src/StateMachine.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/Timer.cpp.o -c /home/default/Baccarat/src/Timer.cpp",
+  "file": "/home/default/Baccarat/src/Timer.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/deckofcards.cpp.o -c /home/default/Baccarat/src/deckofcards.cpp",
+  "file": "/home/default/Baccarat/src/deckofcards.cpp"
+},
+{
+  "directory": "/home/default/Baccarat/src",
+  "command": "/usr/bin/c++   -I/usr/include/SDL2 -I/home/default/Baccarat/include  -g   -std=gnu++14 -o CMakeFiles/Baccarat.dir/main.cpp.o -c /home/default/Baccarat/src/main.cpp",
+  "file": "/home/default/Baccarat/src/main.cpp"
+}
+]
