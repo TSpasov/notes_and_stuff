@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+int main() {
+    int sock = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sock < 0) {
+        perror("socket creation failed");
+        return 1;
+    }
+
+    struct sockaddr_in server_addr;
+    memset(&server_addr, 0, sizeof(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(12345);
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+
+    if (bind(sock, (struct sockaddr*) &server_addr, sizeof(server_addr)) < 0) {
+        perror("bind failed");
+        return 1;
+    }
+
+    char recv_buf[64];
+    socklen_t addr_len = sizeof(server_addr);
+
+    while (true) {
+        recvfrom(sock, recv_buf, sizeof(recv_buf), 0, (struct sockaddr*) &server_addr, &addr_len);
+        std::string message(recv_buf);
+        std::cout << "Received: " << message << " from " << inet_ntoa(server_addr.sin_addr) << ":" << ntohs(server_addr.sin_port) << std::endl;
+    }
+
+    close(sock);
+    return 0;
+}
+ 

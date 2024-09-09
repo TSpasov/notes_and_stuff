@@ -1,0 +1,3 @@
+/home/tspasov/Baccarat/Baccarat/BServer/build/CMakeFiles/BServer.dir
+/home/tspasov/Baccarat/Baccarat/BServer/build/CMakeFiles/edit_cache.dir
+/home/tspasov/Baccarat/Baccarat/BServer/build/CMakeFiles/rebuild_cache.dir

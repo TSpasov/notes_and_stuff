@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/main.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/main.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/main.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/NetworkMgr.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/NetworkMgr.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/NetworkMgr.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/Timer.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/Timer.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/Timer.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/StateMachine.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/StateMachine.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/StateMachine.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/State.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/State.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/State.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/Context.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/Context.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/Context.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/MsgParser.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/MsgParser.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/MsgParser.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp.o -c /home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/deckofcards.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/deckofcards.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/deckofcards.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/Card.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/Card.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/Card.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BServer/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++   -g -std=gnu++14 -o CMakeFiles/BServer.dir/Dealer.cpp.o -c /home/tspasov/Baccarat/Baccarat/BServer/Dealer.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BServer/Dealer.cpp"
+}
+]

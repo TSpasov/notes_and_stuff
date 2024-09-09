@@ -1,0 +1,245 @@
+
+// server
+
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <cstdio>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+
+const int PORT = 8080;
+const int BUFFER_SIZE = 1024;
+
+int main() {
+    int server_socket, client_socket;
+    struct sockaddr_in server_addr, client_addr;
+    char buffer[BUFFER_SIZE];
+
+    // Create socket
+    server_socket = socket(AF_INET, SOCK_STREAM, 0);
+    if (server_socket == -1) {
+        std::cerr << "Error: Could not create socket\n";
+        return 1;
+    }
+
+    // Initialize server address structure
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(PORT);
+
+    // Bind socket to address
+    if (bind(server_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+        std::cerr << "Error: Bind failed\n";
+        return 1;
+    }
+
+    // Listen for incoming connections
+    listen(server_socket, 5);
+    std::cout << "Server listening on port " << PORT << "...\n";
+
+    // Accept incoming connection
+    socklen_t client_size = sizeof(client_addr);
+    client_socket = accept(server_socket, (struct sockaddr *)&client_addr, &client_size);
+    if (client_socket < 0) {
+        std::cerr << "Error: Accept failed\n";
+        return 1;
+    }
+    std::cout << "Connection accepted\n";
+
+    // Receive data from client
+    int bytes_received = recv(client_socket, buffer, BUFFER_SIZE, 0);
+    if (bytes_received < 0) {
+        std::cerr << "Error: Receive failed\n";
+        return 1;
+    }
+    buffer[bytes_received] = '\0';
+    std::cout << "Received message from client: " << buffer << std::endl;
+
+    // Send response to client
+    const char *response = "Message received by server";
+    send(client_socket, response, strlen(response), 0);
+
+    // Close sockets
+    close(client_socket);
+    close(server_socket);
+
+    return 0;
+}
+
+
+// client 
+
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <cstdlib>
+#include <cstdio>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+
+const char *SERVER_IP = "127.0.0.1";
+const int PORT = 8080;
+const int BUFFER_SIZE = 1024;
+
+int main() {
+    int client_socket;
+    struct sockaddr_in server_addr;
+    char buffer[BUFFER_SIZE];
+
+    // Create socket
+    client_socket = socket(AF_INET, SOCK_STREAM, 0);
+    if (client_socket == -1) {
+        std::cerr << "Error: Could not create socket\n";
+        return 1;
+    }
+
+    // Initialize server address structure
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = inet_addr(SERVER_IP);
+    server_addr.sin_port = htons(PORT);
+
+    // Connect to server
+    if (connect(client_socket, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+        std::cerr << "Error: Connection failed\n";
+        return 1;
+    }
+    std::cout << "Connected to server\n";
+
+    // Send data to server
+    const char *message = "Hello, server!";
+    send(client_socket, message, strlen(message), 0);
+    std::cout << "Message sent to server\n";
+
+    // Receive response from server
+    int bytes_received = recv(client_socket, buffer, BUFFER_SIZE, 0);
+    if (bytes_received < 0) {
+        std::cerr << "Error: Receive failed\n";
+        return 1;
+    }
+    buffer[bytes_received] = '\0';
+    std::cout << "Response from server: " << buffer << std::endl;
+
+    // Close socket
+    close(client_socket);
+
+    return 0;
+}
+
+
+// wireshark script
+
+
+local tcp_port_table = DissectorTable.get("tcp.port")
+local myxml_dissector = tcp_port_table:get_dissector(12345)
+
+function dissect_myxml(tvbuf, pktinfo, root)
+    -- Extract relevant fields from the TCP payload (e.g., XML data)
+    -- Your parsing logic goes here
+    -- ...
+
+    -- Add your dissected fields to the packet tree
+    local subtree = root:add(myxml_dissector, tvbuf:range(0, tvbuf:len()))
+    -- Add fields to the subtree
+    -- ...
+
+    -- Continue parsing as needed
+    -- ...
+
+    -- Return the length of the dissected data
+    return tvbuf:len()
+end
+
+-- Register your protocol with the appropriate port
+tcp_port_table:add(12345, myxml_dissector)
+
+
+
+
+
+
+
+// #include <sys/socket.h> // For socket functions
+// #include <netinet/in.h> // For sockaddr_in
+// #include <cstdlib> // For exit() and EXIT_FAILURE
+// #include <iostream> // For cout
+// #include <unistd.h> // For read
+// #include <poll.h> // For poll()
+
+// int main() {
+//   // Create a socket (IPv4, TCP)
+//   int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+//   if (sockfd == -1) {
+//     std::cout << "Failed to create socket. errno: " << errno << std::endl;
+//     exit(EXIT_FAILURE);
+//   }
+
+//   // Listen to port 9999 on any address
+//   sockaddr_in sockaddr;
+//   sockaddr.sin_family = AF_INET;
+//   sockaddr.sin_addr.s_addr = INADDR_ANY;
+//   sockaddr.sin_port = htons(9999); // htons is necessary to convert a number to
+//                                    // network byte order
+//   if (bind(sockfd, (struct sockaddr*)&sockaddr, sizeof(sockaddr)) < 0) {
+//     std::cout << "Failed to bind to port 9999. errno: " << errno << std::endl;
+//     exit(EXIT_FAILURE);
+//   }
+
+//   // Start listening. Hold at most 10 connections in the queue
+//   if (listen(sockfd, 10) < 0) {
+//     std::cout << "Failed to listen on socket. errno: " << errno << std::endl;
+//     exit(EXIT_FAILURE);
+//   }
+
+//   // Set up poll structure
+//   pollfd fds[2];
+//   fds[0].fd = sockfd;
+//   fds[0].events = POLLIN;
+//   fds[1].fd = -1;
+
+//   while (true) {
+//     // Wait for an event (timeout: -1 means wait indefinitely)
+//     int poll_count = poll(fds, 2, -1);
+//     if (poll_count < 0) {
+//       std::cout << "Failed to poll. errno: " << errno << std::endl;
+//       exit(EXIT_FAILURE);
+//     }
+
+//     // Check if there's a new connection
+//     if (fds[0].revents & POLLIN) {
+//       auto addrlen = sizeof(sockaddr);
+//       int connection = accept(sockfd, (struct sockaddr*)&sockaddr, (socklen_t*)&addrlen);
+//       if (connection < 0) {
+//         std::cout << "Failed to grab connection. errno: " << errno << std::endl;
+//         exit(EXIT_FAILURE);
+//       }
+
+//       // Add the new connection to the poll structure
+//       fds[1].fd = connection;
+//       fds[1].events = POLLIN;
+//     }
+
+//     // Check if there's data to read from the connection
+//     if (fds[1].fd != -1 && fds[1].revents & POLLIN) {
+//       char buffer[100];
+//       auto bytesRead = read(fds[1].fd, buffer, 100);
+//       if (bytesRead <= 0) {
+//         // Remove the connection from the poll structure
+//         close(fds[1].fd);
+//         fds[1].fd = -1;
+//       } else {
+//         std::cout << "The message was: " << buffer;
+
+//         // Send a message to the connection
+//         std::string response = "Good talking to you\n";
+//         send(fds[1].fd, response.c_str(), response.size(), 0);
+//       }
+//     }
+//   }
+
+//   close(sockfd);
+// }
+

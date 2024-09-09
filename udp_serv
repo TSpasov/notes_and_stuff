@@ -1,0 +1,32 @@
+ 
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+
+int main() {
+    int sock = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sock < 0) {
+        perror("socket creation failed");
+        return 1;
+    }
+
+    struct sockaddr_in broadcast_addr;
+    memset(&broadcast_addr, 0, sizeof(broadcast_addr));
+    broadcast_addr.sin_family = AF_INET;
+    broadcast_addr.sin_port = htons(12345);
+    broadcast_addr.sin_addr.s_addr = htonl(INADDR_BROADCAST);
+
+    std::string message = "Hello, world!";
+
+    while (true) {
+        sendto(sock, message.c_str(), message.size(), 0, (struct sockaddr*) &broadcast_addr, sizeof(broadcast_addr));
+        std::cout << "Sent: " << message << std::endl;
+        sleep(1);
+    }
+
+    close(sock);
+    return 0;
+}

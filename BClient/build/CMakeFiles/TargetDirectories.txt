@@ -1,0 +1,3 @@
+/home/tspasov/Baccarat/Baccarat/BClient/build/CMakeFiles/BClient.dir
+/home/tspasov/Baccarat/Baccarat/BClient/build/CMakeFiles/edit_cache.dir
+/home/tspasov/Baccarat/Baccarat/BClient/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/main.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/main.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/main.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/StateMachine.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/StateMachine.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/StateMachine.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/Game.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/Game.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/Game.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/NetworkMgr.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/NetworkMgr.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/NetworkMgr.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/State.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/State.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/State.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/Context.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/Context.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/Context.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/MsgParser.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/MsgParser.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/MsgParser.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/Timer.cpp.o -c /home/tspasov/Baccarat/Baccarat/BClient/Timer.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/BClient/Timer.cpp"
+},
+{
+  "directory": "/home/tspasov/Baccarat/Baccarat/BClient/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++  -I/usr/include/SDL2 -g -std=gnu++14 -o CMakeFiles/BClient.dir/home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp.o -c /home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp",
+  "file": "/home/tspasov/Baccarat/Baccarat/tiny/tinyxml2/tinyxml2.cpp"
+}
+]
