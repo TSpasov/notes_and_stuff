@@ -58,7 +58,7 @@ void Dealer::DealHands()
     }
 }
 
-Outcome Dealer::InferOutcome()
+auto Dealer::InferOutcome() -> Outcome
 {
     int playerTotal = m_playerHand.total();
     int bankerTotal = m_bankerHand.total();
@@ -76,12 +76,12 @@ Outcome Dealer::InferOutcome()
     }
 }
 
-Hand Dealer::GetPlayerHand() const
+auto Dealer::GetPlayerHand() const -> Hand
 {
     return m_playerHand;
 }
 
-Hand Dealer::GetBankerHand() const
+auto Dealer::GetBankerHand() const -> Hand
 {
     return m_bankerHand;
 }

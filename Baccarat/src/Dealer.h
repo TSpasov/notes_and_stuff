@@ -3,16 +3,16 @@
 
 #include "Card.h"
 #include "deckofcards.h"
+enum Outcome { PLAYER_WIN, BANKER_WIN, TIE };
 
 class Dealer
 {
 public:
-    enum Outcome { PLAYER_WIN, BANKER_WIN, TIE };
 
     void DealHands();
-    Outcome InferOutcome();
-    Hand GetPlayerHand() const;
-    Hand GetBankerHand() const;
+    auto InferOutcome() -> Outcome;
+    auto GetPlayerHand() const -> Hand;
+    auto GetBankerHand() const -> Hand;
 
     Hand m_playerHand;
     Hand m_bankerHand;

@@ -19,12 +19,12 @@ public:
     Game();
     virtual ~Game();
 
-    bool Init(const char*, int, int, int, int, int);
+    auto Init(const char*, int, int, int, int, int) -> bool;
     void Draw();
     void Update();
-    bool Running();
+    auto Running() -> bool;
 
-    void ChangeScene(const std::string& sceneId);
+    void CreateScene(const std::string& sceneId);
 
 private:
     SDL_Window* m_pWindow;

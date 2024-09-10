@@ -8,9 +8,9 @@ Game::Game()
 {
 
     m_bRunning = true;
-    m_pRenderer = NULL;
-    m_pWindow = NULL;
-    m_BackGroundTexture = 0;
+    m_pRenderer = nullptr;
+    m_pWindow = nullptr;
+    m_BackGroundTexture = nullptr;
 
 }
 
@@ -22,13 +22,13 @@ Game::~Game() {
 //here things will be initialized ******************************************************************************
 
 //init the window
-bool Game::Init(const char* title, int xpos, int ypos, int width, int height, int flags)
+auto Game::Init(const char* title, int xpos, int ypos, int width, int height, int flags) -> bool
 {
     m_pWindow = SDL_CreateWindow(title, xpos, ypos, width, height, flags);
-    if (m_pWindow != 0) // window init success
+    if (m_pWindow != nullptr) // window init success
     {
         m_pRenderer = SDL_CreateRenderer(m_pWindow, -1, 0);
-        if (m_pRenderer != 0) // renderer init success
+        if (m_pRenderer != nullptr) // renderer init success
         {
             SDL_SetRenderDrawColor(m_pRenderer, 255, 255, 255, 255);
 
@@ -77,17 +77,17 @@ void Game::Update() {
 void Game::Draw()
 {
     SDL_RenderClear(m_pRenderer);
-    SDL_RenderCopy(m_pRenderer, m_BackGroundTexture, 0, 0);
+    SDL_RenderCopy(m_pRenderer, m_BackGroundTexture, nullptr, nullptr);
 //    m_scene->Draw();
     SDL_RenderPresent(m_pRenderer);
 }/*end of Draw*/
 
 
-bool Game::Running() {
+auto Game::Running() -> bool {
     return m_bRunning;
 }
 
-void Game::ChangeScene(const string &sceneId)
+void Game::CreateScene(const string &sceneId)
 {
 
 }

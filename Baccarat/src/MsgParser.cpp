@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 
-MsgParser::MsgParser() {}
+MsgParser::MsgParser() = default;
 
 
 

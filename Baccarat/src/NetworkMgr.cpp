@@ -23,7 +23,7 @@ NetworkMgr::NetworkMgr()
     }
 }
 
-bool NetworkMgr::TryToConnect()
+auto NetworkMgr::TryToConnect() -> bool
 {
 
 

@@ -5,6 +5,7 @@
 #include <chrono>
 #include <string>
 #include <unordered_map>
+#include <utility>
 #include <vector>
 
 class Timer
@@ -12,21 +13,21 @@ class Timer
 public:
     using expireCallback = std::function<void(void)>;
 
-    void Process();
-    void ScheduleTimer(void * cl, std::string timerID, expireCallback callback, std::chrono::milliseconds period, int times = -1);
-    void StopTimer(void * cl, const std::string &timerID);
+    auto Process() -> void;
+    auto ScheduleTimer(void * cl, std::string timerID, expireCallback callback, std::chrono::milliseconds period, int times = -1) -> void;
+    auto StopTimer(void * cl, const std::string &timerID) -> void;
 private:
 
-    void RemoveOld();
+    auto RemoveOld() -> void;
 
     struct TimerTask
     {
-       explicit TimerTask(const std::string& ptimerID,
+       explicit TimerTask(std::string  ptimerID,
                   expireCallback pcallback,
                   const  std::chrono::milliseconds& pperiod,
                   int ptimes):
-            timerID(ptimerID),
-            callback(pcallback),
+            timerID(std::move(ptimerID)),
+            callback(std::move(pcallback)),
             period(pperiod),
             times(ptimes)
         {

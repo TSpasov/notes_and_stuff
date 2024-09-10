@@ -1,12 +1,13 @@
 
 #include "StateMachine.h"
-#include "State.h"
+#include "states/State.h"
 #include <iostream>
+#include <utility>
 
 StateMachine::StateMachine(std::shared_ptr<Timer> tm,
                            std::shared_ptr<Context> cntx):
-    m_tm(tm),
-    m_cntx(cntx)
+    m_tm(std::move(tm)),
+    m_cntx(std::move(cntx))
 {
 }
 

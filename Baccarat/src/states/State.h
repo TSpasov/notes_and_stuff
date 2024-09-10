@@ -1,7 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
-#include "StateMachine.h"
+#include "../StateMachine.h"
 
  // State base class
  class State
@@ -12,19 +12,9 @@
      virtual void ChangeState(StateMachine&) {}
      virtual void Exit(StateMachine&) {}
 
-     virtual ~State() {}
+     virtual ~State() = default;
  };
 
-
- class Idle : public State
- {
- public:
-     void Enter(StateMachine&) override;
-
-     void ChangeState(StateMachine&) override;
-
-     void Exit(StateMachine&) override;
- };
 
 
  class Betting : public State

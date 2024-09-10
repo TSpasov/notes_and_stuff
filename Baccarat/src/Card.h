@@ -14,7 +14,7 @@ struct Hand
 {
     std::vector<Card> cards;
 
-    int total() const
+    auto total() const -> int
     {
         int sum = 0;
         for (const auto& card : cards)

@@ -1,3 +1,0 @@
-/home/default/Baccarat/src/CMakeFiles/rebuild_cache.dir
-/home/default/Baccarat/src/CMakeFiles/edit_cache.dir
-/home/default/Baccarat/src/CMakeFiles/Baccarat.dir

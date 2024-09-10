@@ -30,7 +30,7 @@ public:
 
     void RemoveState(const std::string& stateName);
 
-    State* GetCurrentState() const
+    auto GetCurrentState() const -> State*
     {
         return currentState;
     }

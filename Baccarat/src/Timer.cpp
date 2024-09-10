@@ -2,7 +2,7 @@
 #include <algorithm>
 
 
-void Timer::Process()
+auto Timer::Process() -> void
 {
     RemoveOld();
 
@@ -26,7 +26,7 @@ void Timer::Process()
     }
 }
 
-void Timer::ScheduleTimer(void* cl, std::string timerID, expireCallback callback, std::chrono::milliseconds period, int times)
+auto Timer::ScheduleTimer(void* cl, std::string timerID, expireCallback callback, std::chrono::milliseconds period, int times) -> void
 {
     auto it = std::find_if(m_activeTasks.begin(), m_activeTasks.end(),
                            [&](const auto& task){ return task.first == cl;});
@@ -39,7 +39,7 @@ void Timer::ScheduleTimer(void* cl, std::string timerID, expireCallback callback
     m_activeTasks[cl].push_back(TimerTask(timerID, callback, period, times));
 }
 
-void Timer::StopTimer(void* cl,const  std::string& timerID)
+auto Timer::StopTimer(void* cl,const  std::string& timerID) -> void
 {
     auto it = std::find_if(m_activeTasks.begin(), m_activeTasks.end(),
                            [&](const auto& client){ return client.first == cl;});
@@ -58,7 +58,7 @@ void Timer::StopTimer(void* cl,const  std::string& timerID)
     }
 }
 
-void Timer::RemoveOld()
+auto Timer::RemoveOld() -> void
 {
     for (auto itOuter = m_activeTasks.begin(); itOuter != m_activeTasks.end();)
     {

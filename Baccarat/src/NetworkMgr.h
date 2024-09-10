@@ -8,7 +8,7 @@ class NetworkMgr
 {
 public:
     NetworkMgr();
-    bool TryToConnect();
+    auto TryToConnect() -> bool;
     void Process();
 
 
@@ -17,7 +17,7 @@ public:
     void OnRemoveConnection(std::function<void(void)> on_remove);
     void OnRecieve(std::function<void (const std::string)> on_recieve);
 
-    bool IsConnected() const {return m_Connected;}
+    auto IsConnected() const -> bool {return m_Connected;}
 
 private:
 

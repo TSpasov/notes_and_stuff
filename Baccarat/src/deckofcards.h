@@ -10,7 +10,7 @@ class DeckOfCards
 public:
     void Init();
     void Shuffle();
-    Card GetCard();
+    auto GetCard() -> Card;
 
 private:
     std::vector<Card> m_deck;

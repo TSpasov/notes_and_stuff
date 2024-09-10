@@ -8,27 +8,6 @@ using namespace  std::chrono_literals;
 // Base state
 // Base state
 
-// State Idle
-void Idle::Enter(StateMachine& stateMachine)
-{
-
-    stateMachine.m_cntx->m_Game->ChangeScene("inital_scene");
-
-    stateMachine.m_tm->ScheduleTimer(this, "CheckForConnection", [&]()
-    {
-    }, 1000ms, -1);
-}
-
-void Idle::ChangeState(StateMachine& stateMachine)
-{
-
-}
-
-void Idle::Exit(StateMachine& stateMachine)
-{
-
-}
-// State Idle
 
 // State Betting
 void Betting::Enter(StateMachine& stateMachine)

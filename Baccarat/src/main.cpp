@@ -6,7 +6,8 @@
 #include "NetworkMgr.h"
 #include "Timer.h"
 #include "StateMachine.h"
-#include "State.h"
+#include "states/State.h"
+#include "states/Idle.h"
 #include "Context.h"
 #include "MsgParser.h"
 
@@ -14,11 +15,8 @@ const int SCREEN_WIDTH = 1024;
 const int SCREEN_HEIGHT = 768;
 
 // our Game object
-Game* g_game = 0;
-int main(int argc, char* argv[]) {
-
-
-
+Game* g_game = nullptr;
+auto main(int argc, char* argv[]) -> int {
 
     std::shared_ptr<Timer> tm = std::make_shared<Timer>();
     std::shared_ptr<Context> cntx = std::make_shared<Context>(g_game);
@@ -28,6 +26,7 @@ int main(int argc, char* argv[]) {
     machine.AddState("Idle", new Idle());
     machine.AddState("Betting", new Betting());
     machine.AddState("Dealing", new Dealing());
+//    machine.AddState("Dealing", new EndGame());
     machine.AddState("Error", new Error());
 
     // set inital state
