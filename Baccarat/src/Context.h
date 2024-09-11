@@ -1,15 +1,16 @@
 #ifndef CONTEXT_H
 #define CONTEXT_H
 
-#include "Game.h"
+#include <functional> 
+
 class Context
 {
 public:
     friend class State;
 
-    Context(Game* game);
+    Context();
 
- Game* m_Game;
+std::function<void(const std::string)> ChaneState;
 private:
 
 };

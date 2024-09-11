@@ -9,6 +9,9 @@ StateMachine::StateMachine(std::shared_ptr<Timer> tm,
     m_tm(std::move(tm)),
     m_cntx(std::move(cntx))
 {
+    m_cntx->ChaneState = [&](const std::string& new_state){
+        ChangeState(new_state);
+    };
 }
 
 StateMachine::~StateMachine()
@@ -26,7 +29,6 @@ void StateMachine::Update()
         currentState->ChangeState(*this);
     }
 }
-
 
 void StateMachine::ChangeState(const std::string& stateName)
 {

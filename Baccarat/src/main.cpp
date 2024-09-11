@@ -19,7 +19,7 @@ Game* g_game = nullptr;
 auto main(int argc, char* argv[]) -> int {
 
     std::shared_ptr<Timer> tm = std::make_shared<Timer>();
-    std::shared_ptr<Context> cntx = std::make_shared<Context>(g_game);
+    std::shared_ptr<Context> cntx = std::make_shared<Context>();
 
     StateMachine machine(tm, cntx);
     // register states
@@ -32,7 +32,7 @@ auto main(int argc, char* argv[]) -> int {
     // set inital state
     machine.ChangeState("Idle");
 
-    g_game = new Game();
+    g_game = new Game(cntx.get());
     g_game->Init("Baccarat", 170, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
     //main loop

@@ -12,11 +12,13 @@
 #include <SDL2/SDL_image.h>
 #include <string>
 
+#include "Context.h"
+
 using namespace std;
 
 class Game {
 public:
-    Game();
+    Game(Context* ct);
     virtual ~Game();
 
     auto Init(const char*, int, int, int, int, int) -> bool;
@@ -40,6 +42,7 @@ private:
     Sint32 cursor;
     Sint32 selection_len;
 
+    Context *ctx;
 //    GameScene m_scene;
 
 };

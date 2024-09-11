@@ -3,8 +3,7 @@
 // State Idle
 void Idle::Enter(StateMachine& stateMachine)
 {
-
-    stateMachine.m_cntx->m_Game->CreateScene("inital_scene");
+   //m_Game->CreateScene("inital_scene");
 }
 
 void Idle::ChangeState(StateMachine& stateMachine)

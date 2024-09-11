@@ -4,7 +4,8 @@
 #include  "SDL_keyboard.h"
 //static objects
 
-Game::Game()
+Game::Game(Context* ct):
+ctx(ct)
 {
 
     m_bRunning = true;
@@ -66,6 +67,26 @@ void Game::Update() {
         case SDL_QUIT:
 
             m_bRunning = false;
+            break;
+            
+        case SDL_KEYDOWN: 
+            switch (event.key.keysym.sym)
+            {
+            case SDLK_b: 
+            
+                std::cout << "B key pressed!" << std::endl;
+                ctx->ChaneState("Beting");
+                break;
+
+            case SDLK_d: 
+
+                std::cout << "D key pressed!" << std::endl;
+                ctx->ChaneState("Dealing");
+                break;
+
+            default:
+                break;
+            }
             break;
 
         default:
