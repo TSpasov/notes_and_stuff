@@ -9,7 +9,7 @@ class Dealer
 {
 public:
 
-    void DealHands();
+    auto DealHands() -> void;
     auto InferOutcome() -> Outcome;
     auto GetPlayerHand() const -> Hand;
     auto GetBankerHand() const -> Hand;

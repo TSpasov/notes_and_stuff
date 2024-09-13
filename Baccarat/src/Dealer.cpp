@@ -1,7 +1,7 @@
 #include "Dealer.h"
 
 
-void Dealer::DealHands()
+auto Dealer::DealHands() -> void
 {
     m_playerHand.cards.clear();
     m_bankerHand.cards.clear();

@@ -56,7 +56,8 @@ auto Game::Init(const char* title, int xpos, int ypos, int width, int height, in
 }/*end of Init*/
 
 
-void Game::Update() {
+auto Game::Update() -> void
+ {
 
     SDL_Event event;
     //close windows
@@ -72,16 +73,24 @@ void Game::Update() {
         case SDL_KEYDOWN: 
             switch (event.key.keysym.sym)
             {
+            case SDLK_i: 
+                std::cout << "I key pressed!" << std::endl;
+                ctx->ChangeState("Idle");
+                break;
+
             case SDLK_b: 
-            
                 std::cout << "B key pressed!" << std::endl;
-                ctx->ChaneState("Beting");
+                ctx->ChangeState("Beting");
                 break;
 
             case SDLK_d: 
-
                 std::cout << "D key pressed!" << std::endl;
-                ctx->ChaneState("Dealing");
+                ctx->ChangeState("Dealing");
+                break;
+
+            case SDLK_e: 
+                std::cout << "E key pressed!" << std::endl;
+                ctx->ChangeState("EndRound");
                 break;
 
             default:
@@ -95,11 +104,11 @@ void Game::Update() {
     }
 }
 
-void Game::Draw()
+auto Game::Draw() -> void
 {
     SDL_RenderClear(m_pRenderer);
     SDL_RenderCopy(m_pRenderer, m_BackGroundTexture, nullptr, nullptr);
-//    m_scene->Draw();
+//    m_scene->Draw(m_pRenderer);
     SDL_RenderPresent(m_pRenderer);
 }/*end of Draw*/
 
@@ -108,7 +117,7 @@ auto Game::Running() -> bool {
     return m_bRunning;
 }
 
-void Game::CreateScene(const string &sceneId)
+auto Game::CreateScene(const string &sceneId) -> void
 {
 
 }

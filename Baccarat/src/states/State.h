@@ -15,39 +15,4 @@
      virtual ~State() = default;
  };
 
-
-
- class Betting : public State
- {
- public:
-     void Enter(StateMachine&) override;
-
-     void ChangeState(StateMachine&) override;
-
-     void Exit(StateMachine&) override;
- };
-
-
- class Dealing : public State
- {
- public:
-     void Enter(StateMachine&) override;
-
-     void ChangeState(StateMachine&) override;
-
-     void Exit(StateMachine&) override;
- };
-
-
- class Error : public State
- {
- public:
-     void Enter(StateMachine&) override;
-
-     void ChangeState(StateMachine&) override;
-
-     void Exit(StateMachine&) override;
- };
-
-
 #endif // STATE_H

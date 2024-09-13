@@ -22,11 +22,10 @@ public:
     virtual ~Game();
 
     auto Init(const char*, int, int, int, int, int) -> bool;
-    void Draw();
-    void Update();
+    auto Draw() -> void;
+    auto Update() -> void;
     auto Running() -> bool;
-
-    void CreateScene(const std::string& sceneId);
+    auto CreateScene(const std::string& sceneId) -> void;
 
 private:
     SDL_Window* m_pWindow;

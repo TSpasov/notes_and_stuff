@@ -10,7 +10,7 @@ public:
 
     Context();
 
-std::function<void(const std::string)> ChaneState;
+std::function<void(const std::string)> ChangeState;
 private:
 
 };

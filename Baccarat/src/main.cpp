@@ -6,6 +6,9 @@
 #include "NetworkMgr.h"
 #include "Timer.h"
 #include "StateMachine.h"
+#include "states/Betting.h"
+#include "states/Dealing.h"
+#include "states/EndRound.h"
 #include "states/State.h"
 #include "states/Idle.h"
 #include "Context.h"
@@ -26,8 +29,8 @@ auto main(int argc, char* argv[]) -> int {
     machine.AddState("Idle", new Idle());
     machine.AddState("Betting", new Betting());
     machine.AddState("Dealing", new Dealing());
-//    machine.AddState("Dealing", new EndGame());
-    machine.AddState("Error", new Error());
+    machine.AddState("EndRound", new EndRound());
+
 
     // set inital state
     machine.ChangeState("Idle");
