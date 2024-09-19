@@ -1,8 +1,8 @@
 #include "Game.h"
 #include <iostream>
-#include <ostream>
-#include  "SDL_keyboard.h"
-//static objects
+
+#include "SDL_keyboard.h"
+// ... existing code ...
 
 Game::Game(Context* ct):
 ctx(ct)
@@ -108,7 +108,10 @@ auto Game::Draw() -> void
 {
     SDL_RenderClear(m_pRenderer);
     SDL_RenderCopy(m_pRenderer, m_BackGroundTexture, nullptr, nullptr);
-//    m_scene->Draw(m_pRenderer);
+    if (m_pCurrentScene)
+    {
+            m_pCurrentScene->Draw(m_pRenderer);
+    }
     SDL_RenderPresent(m_pRenderer);
 }/*end of Draw*/
 
@@ -119,5 +122,11 @@ auto Game::Running() -> bool {
 
 auto Game::CreateScene(const string &sceneId) -> void
 {
-
+        if (sceneId == "MainMenu") {
+            m_pCurrentScene = std::make_unique<MainMenuScene>(m_pRenderer);
+        } else if (sceneId == "GamePlay") {
+            m_pCurrentScene = std::make_unique<GamePlayScene>(m_pRenderer);
+        } else {
+            std::cerr << "Unknown scene ID: " << sceneId << std::endl;
+        }
 }

@@ -13,6 +13,10 @@
 #include <string>
 
 #include "Context.h"
+#include "Scene.h"
+#include "MainMenuScene.h"
+#include "GamePlayScene.h"
+#include <memory>
 
 using namespace std;
 
@@ -42,8 +46,7 @@ private:
     Sint32 selection_len;
 
     Context *ctx;
-//    GameScene m_scene;
-
-};
+    std::unique_ptr<Scene> m_pCurrentScene;  // Added scene pointer
+    };
 
 #endif /* GAME_H_ */
