@@ -4,7 +4,9 @@
 
  class Betting : public State
  {
- public:
+
+public:
+    
      void Enter(StateMachine&) override;
 
      void ChangeState(StateMachine&) override;

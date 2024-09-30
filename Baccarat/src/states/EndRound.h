@@ -2,9 +2,11 @@
 
 #include "State.h"
 
- class EndRound : public State
- {
- public:
+class EndRound : public State
+{
+
+public:
+
      void Enter(StateMachine&) override;
 
      void ChangeState(StateMachine&) override;

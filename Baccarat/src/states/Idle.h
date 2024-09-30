@@ -3,9 +3,12 @@
 
 #include "State.h"
 
+
 class Idle : public State
 {
+    
 public:
+
     void Enter(StateMachine&) override;
 
     void ChangeState(StateMachine&) override;

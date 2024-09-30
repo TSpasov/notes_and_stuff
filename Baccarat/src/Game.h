@@ -12,11 +12,11 @@
 #include <SDL2/SDL_image.h>
 #include <string>
 
-#include "Context.h"
 #include "Scene.h"
 #include "MainMenuScene.h"
 #include "GamePlayScene.h"
 #include <memory>
+#include "Context.h"
 
 using namespace std;
 

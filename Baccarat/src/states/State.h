@@ -2,6 +2,7 @@
 #define STATE_H
 
 #include "../StateMachine.h"
+#include "../Game.h"
 
  // State base class
  class State

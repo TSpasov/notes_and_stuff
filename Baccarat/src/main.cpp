@@ -21,22 +21,25 @@ const int SCREEN_HEIGHT = 768;
 Game* g_game = nullptr;
 auto main(int argc, char* argv[]) -> int {
 
+ 
     std::shared_ptr<Timer> tm = std::make_shared<Timer>();
     std::shared_ptr<Context> cntx = std::make_shared<Context>();
 
+   
     StateMachine machine(tm, cntx);
     // register states
-    machine.AddState("Idle", new Idle());
-    machine.AddState("Betting", new Betting());
-    machine.AddState("Dealing", new Dealing());
-    machine.AddState("EndRound", new EndRound());
+    machine.AddState("Idle", new Idle);
+    machine.AddState("Betting", new Betting);
+    machine.AddState("Dealing", new Dealing);
+    machine.AddState("EndRound", new EndRound);
 
-
-    // set inital state
-    machine.ChangeState("Idle");
 
     g_game = new Game(cntx.get());
     g_game->Init("Baccarat", 170, 0, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    // set inital state
+    machine.ChangeState("Idle");
+
+
 
     //main loop
     while (g_game->Running())

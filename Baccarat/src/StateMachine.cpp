@@ -9,7 +9,8 @@ StateMachine::StateMachine(std::shared_ptr<Timer> tm,
     m_tm(std::move(tm)),
     m_cntx(std::move(cntx))
 {
-    m_cntx->ChangeState = [&](const std::string& new_state){
+    m_cntx->ChangeState = [&](const std::string& new_state)-> void
+    {
         ChangeState(new_state);
     };
 }

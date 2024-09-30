@@ -12,6 +12,11 @@ ctx(ct)
     m_pRenderer = nullptr;
     m_pWindow = nullptr;
     m_BackGroundTexture = nullptr;
+    ctx->CreateScene = [&](const std::string& sceneID)
+    {
+        CreateScene(sceneID);
+    };
+
 
 }
 

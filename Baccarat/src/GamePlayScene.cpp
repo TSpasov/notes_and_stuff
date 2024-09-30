@@ -3,8 +3,8 @@
 
 GamePlayScene::GamePlayScene(SDL_Renderer* renderer) {
     // Load background texture
-    SDL_Surface* background = IMG_Load("data/gameplay_bg.png");
-    m_backgroundTexture = SDL_CreateTextureFromSurface(renderer, background);
+    SDL_Surface* background = IMG_Load("data/cards.png");
+    m_cardsTexture = SDL_CreateTextureFromSurface(renderer, background);
     SDL_FreeSurface(background);
 
     // Initialize game objects and UI elements
@@ -16,6 +16,8 @@ GamePlayScene::~GamePlayScene() {
 }
 
 void GamePlayScene::Draw(SDL_Renderer* renderer) {
-    SDL_RenderCopy(renderer, m_backgroundTexture, nullptr, nullptr);
+    // Draw cards texture
+    SDL_RenderCopy(renderer, m_cardsTexture, &m_cardsSrcRect, &m_cardsDstRect);
+    
     // Draw game objects and UI elements
 }

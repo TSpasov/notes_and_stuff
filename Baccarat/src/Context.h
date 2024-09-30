@@ -11,6 +11,7 @@ public:
     Context();
 
 std::function<void(const std::string)> ChangeState;
+std::function<void(const std::string)> CreateScene;
 private:
 
 };
