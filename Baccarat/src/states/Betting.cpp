@@ -1,9 +1,11 @@
-
 #include "Betting.h"
+#include "../Game.h"  // Adjust the path as necessary to correctly include Game.h
+
 // State Betting
 
 void Betting::Enter(StateMachine& stateMachine)
 {
+    stateMachine.m_cntx->CreateScene("BettingScene");
 
 }
 

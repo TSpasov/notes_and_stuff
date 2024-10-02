@@ -85,7 +85,7 @@ auto Game::Update() -> void
 
             case SDLK_b: 
                 std::cout << "B key pressed!" << std::endl;
-                ctx->ChangeState("Beting");
+                ctx->ChangeState("Betting");
                 break;
 
             case SDLK_d: 
@@ -131,6 +131,10 @@ auto Game::CreateScene(const string &sceneId) -> void
             m_pCurrentScene = std::make_unique<MainMenuScene>(m_pRenderer);
         } else if (sceneId == "GamePlay") {
             m_pCurrentScene = std::make_unique<GamePlayScene>(m_pRenderer);
+        
+        } else if (sceneId == "BettingScene") {
+            m_pCurrentScene = std::make_unique<BettingScene>(m_pRenderer);
+        
         } else {
             std::cerr << "Unknown scene ID: " << sceneId << std::endl;
         }

@@ -15,6 +15,7 @@
 #include "Scene.h"
 #include "MainMenuScene.h"
 #include "GamePlayScene.h"
+#include "BettingScene.h"
 #include <memory>
 #include "Context.h"
 
