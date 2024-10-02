@@ -12,6 +12,8 @@ ctx(ct)
     m_pRenderer = nullptr;
     m_pWindow = nullptr;
     m_BackGroundTexture = nullptr;
+    m_pCurrentScene = std::make_unique<MainMenuScene>(m_pRenderer);
+
     ctx->CreateScene = [&](const std::string& sceneID)
     {
         CreateScene(sceneID);
@@ -68,6 +70,7 @@ auto Game::Update() -> void
     //close windows
     if (SDL_PollEvent(&event))
     {
+        m_pCurrentScene->HandleEvent(event);
         switch (event.type)
         {
         case SDL_QUIT:

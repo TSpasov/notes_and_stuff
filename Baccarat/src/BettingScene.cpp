@@ -40,73 +40,44 @@ void BettingScene::Draw(SDL_Renderer* renderer) {
     // SDL_RenderCopy(renderer, m_backgroundTexture, nullptr, nullptr);
 
     // Draw betting UI elements (buttons, text, etc.)
-    DrawButton(renderer, "Bet 10",  100, 400, 200, 50);
-    DrawButton(renderer, "Bet 50",  100, 460, 200, 50);
-    DrawButton(renderer, "Bet 100", 100, 520, 200, 50);
+      for (const auto& button : m_buttons) {
+            DrawButton(renderer, button);
+        }
     // DrawText(renderer, "Current Bet: $0", 400, 100, 200, 50);
 
 }
-    // Implement DrawButton function
-        // Draw button background
-void BettingScene::DrawButton(SDL_Renderer* renderer, const char* text, int x, int y, int w, int h) {
-    SDL_Rect buttonRect = {x, y, w, h};
-    SDL_SetRenderDrawColor(renderer, 200, 200, 200, 255);  // Light gray color
-    SDL_RenderFillRect(renderer, &buttonRect);
-    
-    // Draw button border
-    SDL_SetRenderDrawColor(renderer, 100, 100, 100, 255);  // Dark gray color
-    SDL_RenderDrawRect(renderer, &buttonRect);
-    
-    // Render text
-    if (m_font != nullptr) {
-        SDL_Color textColor = {255, 255, 255, 255};  // Black color
-        SDL_Surface* textSurface = TTF_RenderText_Solid(m_font, text, textColor);
-        if (textSurface != nullptr) {
-            SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-            if (textTexture != nullptr) {
-                SDL_Rect textRect;
-                textRect.x = x + (w - textSurface->w) / 2;  // Center text horizontally
-                textRect.y = y + (h - textSurface->h) / 2;  // Center text vertically
-                textRect.w = textSurface->w;
-                textRect.h = textSurface->h;
-                
-                SDL_RenderCopy(renderer, textTexture, nullptr, &textRect);
-                SDL_DestroyTexture(textTexture);
-            }
-            SDL_FreeSurface(textSurface);
-        }
-    }
-}
-
 
 void BettingScene::HandleEvent(const SDL_Event& event) {
-        if (event.type == SDL_MOUSEMOTION || event.type == SDL_MOUSEBUTTONDOWN || event.type == SDL_MOUSEBUTTONUP) {
-            int mouseX, mouseY;
-            SDL_GetMouseState(&mouseX, &mouseY);
+    if (event.type == SDL_MOUSEMOTION || event.type == SDL_MOUSEBUTTONDOWN || event.type == SDL_MOUSEBUTTONUP) {
+        int mouseX, mouseY;
+        SDL_GetMouseState(&mouseX, &mouseY);
 
-            for (auto& button : m_buttons) {
-                bool isInside = SDL_PointInRect(&SDL_Point{mouseX, mouseY}, &button.rect);
-                
-                button.isHovered = isInside;
-                
-                if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) {
-                    button.isPressed = isInside;
-                } else if (event.type == SDL_MOUSEBUTTONUP && event.button.button == SDL_BUTTON_LEFT) {
-                    if (isInside && button.isPressed) {
-                        // Button click action
-                        HandleButtonClick(button.text);
+        for (auto& button : m_buttons) {
+            SDL_Point point{mouseX, mouseY};
+            bool isInside = SDL_PointInRect(&point, &button.rect);
+            
+            button.isHovered = isInside;
+            
+            if (event.type == SDL_MOUSEBUTTONDOWN && event.button.button == SDL_BUTTON_LEFT) {
+                if (isInside) {
+                    // Deselect all buttons
+                    for (auto& otherButton : m_buttons) {
+                        otherButton.isSelected = false;
                     }
-                    button.isPressed = false;
+                    // Select the clicked button
+                    button.isSelected = true;
+                    HandleButtonClick(button.text);
                 }
             }
         }
+    }
 }
 
 void BettingScene::DrawButton(SDL_Renderer* renderer, const Button& button) {
     SDL_Rect buttonRect = button.rect;
     
     // Choose button color based on state
-    SDL_Color bgColor = button.isPressed ? SDL_Color{150, 150, 150, 255} :
+    SDL_Color bgColor = button.isSelected ? SDL_Color{100, 100, 255, 255} :
                         button.isHovered ? SDL_Color{180, 180, 180, 255} :
                                            SDL_Color{200, 200, 200, 255};
     
