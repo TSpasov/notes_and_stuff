@@ -1,0 +1,77 @@
+Explanation:
+Conditions:
+
+Scenario: BONUS_GAME: Captured based on the log event BONUS_TRIGGER and BONUS_START.
+Bet Placed: Refers to the log BET_PLACED, showing that the player has placed a bet of 100 credits.
+Sufficient Bet: Checks whether the condition SUFFICIENT_BET_CHECK has passed, which indicates that a sufficient bet was placed (true).
+Button Press: Refers to the log entry where the Deal button was pressed by the player (BUTTON_PRESS).
+Previous Round Win: The condition that checks if the player won the previous round (PREVIOUS_ROUND_CHECK is true).
+Global Sound Setting: Checks if the sound is enabled (GLOBAL_SETTING_CHECK is true).
+Expected Actions:
+
+Event Outcome: Based on the conditions, different events or actions occur, such as starting the bonus game (BONUS_START), transitioning the game state to DEALING, updating the player credits, playing the sound, and starting the animation.
+Logger Events in Context:
+The decision table helps verify if all the required conditions lead to the correct sequence of events, such as:
+
+Starting a bonus game after triggering.
+State changes from BETTING to DEALING.
+Correct sound and animation being played when the deal button is pressed.
+Sample Assertions:
+If a bonus is triggered (BONUS_TRIGGER), the game should transition to BONUS_START.
+After placing a sufficient bet and pressing the deal button, the state should change to DEALING.
+Player credits should decrease by the bet amount after pressing the deal button.
+
+
+
+
+
+Какво е таблица за вземане на решения?
+Таблицата за вземане на решения е инструмент в тестването на софтуер, който помага да се дефинират правила и да се проверява поведението на системата при различни комбинации от входни данни и условия. Това е особено полезно в сложни системи, като игри, където множество събития трябва да се случат последователно.
+
+Как работи в нашия сценарий?
+Нашата таблица е фокусирана върху основни събития от игровия процес и логове, които се записват, когато играчът извършва определени действия. Всеки ред в таблицата представлява различна комбинация от входни условия и действия, а колоните показват изхода (какво трябва да се случи), ако тези условия са изпълнени.
+
+Пример за входни условия:
+Сценарий: BONUS_GAME:
+
+Играта следи дали е задействан бонусният сценарий, който започва с лог събитие BONUS_TRIGGER и се потвърждава със BONUS_START.
+Заложен облог (BET_PLACED):
+
+Проверява се дали играчът е направил залог, като се записва в лога събитие BET_PLACED. В нашия случай играчът е заложил 100 кредита.
+Проверка на достатъчен залог (SUFFICIENT_BET_CHECK):
+
+Системата проверява дали направеният залог отговаря на минималните изисквания за продължаване на играта. Ако условието е изпълнено, стойността е true.
+Натискане на бутон (BUTTON_PRESS):
+
+След като играчът направи залог, натискането на бутона Deal трябва да бъде регистрирано като събитие BUTTON_PRESS.
+Проверка на глобалните настройки за звук (GLOBAL_SETTING_CHECK):
+
+Това е проверка дали звуците в играта са включени. Ако настройката е true, трябва да се възпроизведе съответен звук при определени действия.
+Пример за изход:
+Начало на бонус игра (BONUS_START):
+
+Когато бонус играта е задействана (BONUS_TRIGGER), системата трябва да премине към състояние BONUS_START, което стартира бонусния рунд.
+Промяна на състоянието (STATE_CHANGE):
+
+След като играчът заложи и натисне Deal, играта трябва да премине от състояние BETTING към състояние DEALING. Това се регистрира с лог събитие STATE_CHANGE.
+Актуализиране на кредити (CREDIT_UPDATE):
+
+След като играчът направи залог, кредитите му трябва да се намалят с размера на залога. В нашия случай кредитите се намаляват с 100 и играчът остава с 900 кредита.
+Възпроизвеждане на звук (SOUND_PLAY):
+
+Ако глобалната звукова настройка е включена, при натискане на Deal трябва да се възпроизведе звукът card_deal.wav.
+Стартиране на анимация (ANIMATION_START):
+
+При започване на раздаването на картите, системата трябва да стартира анимация deal_cards_animation.
+Как таблицата помага?
+Тази таблица описва всички важни събития и техните зависимости, за да гарантира, че играта реагира правилно на действията на играча и изпълнява всички изисквания. Тестването с такава таблица ни помага да проверим:
+
+Всяко действие (напр. залог, натискане на бутон) води до правилно събитие (напр. обновяване на кредити, промяна на състояние).
+Събитията се изпълняват в правилния ред.
+Всички условия (като достатъчен залог или включен звук) се проверяват и изпълняват правилно.
+Примерен процес на тест:
+Играчът прави залог → Логът показва BET_PLACED.
+Системата проверява дали залогът е достатъчен → Логът показва SUFFICIENT_BET_CHECK = true.
+Играчът натиска Deal → Логът показва BUTTON_PRESS и системата преминава в състояние DEALING.
+Кредитите на играча намаляват → Логът показва CREDIT_UPDATE, като играчът вече има 900 кредита.
+Звукът за раздаване се възпроизвежда и анимацията започва → Логовете показват SOUND_PLAY и ANIMATION_START.

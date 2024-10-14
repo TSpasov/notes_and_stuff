@@ -1,0 +1,15 @@
+begin -> test_1.2
+event -> start
+action -> start
+event -> stop
+action -> stop
+action -> reset_values
+event -> stop
+action -> stop
+action -> reset_values
+event -> stop
+action -> stop
+action -> reset_values
+event -> exit
+action -> exit
+end -> test_1.2
