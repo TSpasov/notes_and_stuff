@@ -1,0 +1,62 @@
+{
+    "events": [
+      {
+        "name": "game_started",
+        "expected": [
+          "Sound played: start new game",
+          "State changed: dealing"
+        ]
+      },
+      {
+        "name": "start_button_pressed",
+        "condition": "bet_value > 0",
+        "expected": [
+          "Sound played: bet_placed_sound",
+          "Animation started: bet_confirmation"
+        ],
+        "else": {
+          "expected": [
+            "Sound played: error"
+          ]
+        }
+      },
+      {
+        "name": "credit_updated",
+        "condition": "credit == 350",
+        "expected": [
+          "Animation started: credit_deduction"
+        ]
+      },
+      {
+        "name": "cards_dealt",
+        "condition": "player_score > banker_score",
+        "expected": [
+          "Outcome: player_win",
+          "Animation started: card_dealing",
+          "Sound played: result_announcement"
+        ],
+        "else": {
+          "expected": [
+            "Outcome: banker_win",
+            "Sound played: banker_win_announcement"
+          ]
+        }
+      },
+      {
+        "name": "payout_awarded",
+        "condition": "payout == 100 AND new_credit == 550",
+        "expected": [
+          "Sound played: payout_sound",
+          "Animation started: payout_animation"
+        ]
+      },
+      {
+        "name": "round_completed",
+        "condition": "new_credit == 550",
+        "expected": [
+          "State changed: waiting_for_bet"
+        ]
+      }
+    ]
+  }
+  

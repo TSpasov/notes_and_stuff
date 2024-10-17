@@ -24,7 +24,6 @@
         </then>
     </event>
 
-<!--
 
     <event name="credit_updated">
         <condition>credit == 350</condition>
@@ -59,5 +58,5 @@
             <expected name="state">waiting_for_bet</expected>
         </then>
     </event>
--->
+
 </rules>

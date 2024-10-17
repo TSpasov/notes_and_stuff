@@ -23,6 +23,7 @@
 #     except Exception as e:
 #         return str(e)
 
+
 import re
 import xml.etree.ElementTree as ET
 
@@ -128,7 +129,7 @@ class RuleSet:
         # Try to match log entry with expected outcomes
         for expected in expected_outcomes:
             for key, value in expected.items():
-                if key.lower() in log_entry.lower() and value.lower() in log_entry.lower():
+                if self.match_expected_outcome(log_entry, key, value):
                     matched_outcomes.append(expected)
                     unmatched.remove(expected)
                     print(f"Matched expected outcome: {expected}")
@@ -139,6 +140,12 @@ class RuleSet:
             print(f"Missing expected outcomes: {unmatched}")
             print(f"Context (log excerpt): \n{' '.join(log_history[-3:])}")
 
+    def match_expected_outcome(self, log_entry, key, value):
+        # Perform a case-insensitive check for both the key and value in the log entry
+        key_match = key.lower() in log_entry.lower()
+        value_match = value.lower() in log_entry.lower()
+        return key_match and value_match
+
 
 def main():
     rule_set = RuleSet("rules.xml")
@@ -148,7 +155,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
