@@ -1,0 +1,19 @@
+[14.10.24 14:05:01] h1::AT: bet_value = 20
+[14.10.24 14:05:01] h1::AT: Game started
+[14.10.24 14:05:01] h1::AT: State changed: dealing
+[14.10.24 14:05:01] h1::AT: Sound played: start new game
+[14.10.24 14:05:05] h1::AT: Bet placed
+[14.10.24 14:05:05] h1::AT: Sound played: bet_placed_sound
+[14.10.24 14:05:05] h1::AT: Animation started: bet_confirmation
+[14.10.24 14:05:10] h1::AT: Credit updated: 450
+[14.10.24 14:05:10] h1::AT: Animation started: credit_deduction
+[14.10.24 14:05:15] h1::AT: Cards dealt - Player score: 3, Banker score: 1
+[14.10.24 14:05:15] h1::AT: Animation started: card_dealing
+[14.10.24 14:05:18] h1::AT: Outcome: player_win
+[14.10.24 14:05:18] h1::AT: Sound played: result_announcement
+[14.10.24 14:05:22] h1::AT: Payout: 100
+[14.10.24 14:05:22] h1::AT: New credit after payout: 550
+[14.10.24 14:05:22] h1::AT: Animation started: payout_animation
+[14.10.24 14:05:22] h1::AT: Sound played: payout_sound
+[14.10.24 14:05:30] h1::AT: Round completed
+[14.10.24 14:05:30] h1::AT: State changed: waiting_for_bet

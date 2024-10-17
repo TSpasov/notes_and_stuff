@@ -1,0 +1,161 @@
+<rules>
+    <!-- Meta data section that describes variables used in the expressions -->
+    <meta name="data">
+        <variable name="gameStarted" type="bool" description="Indicates if the game has started"/>
+        <variable name="newCredit" type="integer" description="The updated credit amount after a game round"/>
+        <variable name="deltaTime" type="float" description="Time delta between actions in seconds"/>
+        <variable name="bet_value" type="integer" description="The amount of bet placed"/>
+        <variable name="min_bet" type="integer" description="The minimum bet value allowed"/>
+        <variable name="max_bet" type="integer" description="The maximum bet value allowed"/>
+        <variable name="win_amount" type="integer" description="The amount won in the current game round"/>
+        <variable name="previous_credit" type="integer" description="The credit before the current round"/>
+        <variable name="user_action" type="string" description="The action performed by the user"/>
+        <variable name="player_score" type="integer" description="The score for the player hand"/>
+        <variable name="banker_score" type="integer" description="The score for the banker hand"/>
+        <variable name="outcome" type="string" description="The outcome of the game round (win/lose/tie)"/>
+        <variable name="execution_time" type="float" description="Execution time for a specific event"/>
+        <variable name="consecutive_wins" type="integer" description="The number of consecutive wins a player has"/>
+    </meta>
+
+    <!-- Stateful event: Starting a game -->
+    <event name="start_game">
+        <condition>bet_value > 0</condition>
+        <condition>bet_value >= min_bet AND bet_value <= max_bet</condition>
+        <condition>credit >= bet_value</condition>
+        <then>
+            <expected name="sound">start new game</expected>
+            <expected name="state">dealing</expected>
+            <expected name="scene">dealing first card</expected>
+            <expected name="credit">-bet_value</expected>
+        </then>
+        <else>
+            <expected name="sound">reject</expected>
+            <expected name="scene">place bets</expected>
+        </else>
+        <unconditional>
+            <expected name="previous_credit">credit</expected>
+        </unconditional>
+    </event>
+
+    <!-- Parsing the log file to capture key events -->
+    <event name="parse_log">
+        <condition>log_entry contains 'bet placed'</condition>
+        <then>
+            <expected name="action">bet_placed</expected>
+        </then>
+    </event>
+
+    <!-- Timeout handling between player actions -->
+    <event name="time_check">
+        <condition>deltaTime <= max_allowed_time</condition>
+        <then>
+            <expected name="status">valid_time</expected>
+        </then>
+        <else>
+            <expected name="status">timeout_error</expected>
+            <expected name="action">log_timeout</expected>
+        </else>
+    </event>
+
+    <!-- Multi-state event correlation: Determining the winner -->
+    <event name="determine_winner">
+        <condition>player_score > banker_score</condition>
+        <then>
+            <expected name="outcome">player_win</expected>
+        </then>
+        <else>
+            <condition>banker_score > player_score</condition>
+            <then>
+                <expected name="outcome">banker_win</expected>
+            </then>
+            <else>
+                <expected name="outcome">tie</expected>
+            </else>
+        </else>
+    </event>
+
+    <!-- Session management: Handling multiple game rounds -->
+    <event name="new_round">
+        <condition>previous_round == 'complete'</condition>
+        <then>
+            <expected name="state">waiting_for_bet</expected>
+            <expected name="round">round_number + 1</expected>
+        </then>
+    </event>
+
+    <!-- Special case handling for "natural" hands (both player and banker have a natural) -->
+    <event name="special_case">
+        <condition>player_hand == 'natural' AND banker_hand == 'natural'</condition>
+        <then>
+            <expected name="outcome">tie</expected>
+            <expected name="action">log_special_case</expected>
+        </then>
+    </event>
+
+    <!-- Complex payout calculation based on bet type -->
+    <event name="calculate_payout">
+        <condition>bet_type == 'player'</condition>
+        <then>
+            <expected name="payout">bet_value * 2</expected>
+        </then>
+        <else>
+            <condition>bet_type == 'banker'</condition>
+            <then>
+                <expected name="payout">bet_value * 1.95</expected>
+            </then>
+        </else>
+    </event>
+
+    <!-- Validating that results match Baccarat game rules -->
+    <event name="validate_result">
+        <condition>outcome != valid_outcome(player_score, banker_score)</condition>
+        <then>
+            <expected name="action">log_invalid_result</expected>
+            <expected name="alert">notify_admin</expected>
+        </then>
+    </event>
+
+    <!-- Pattern detection for identifying suspicious betting behaviors -->
+    <event name="pattern_detection">
+        <condition>pattern == 'minimal_bet_sequence'</condition>
+        <then>
+            <expected name="action">log_pattern</expected>
+            <expected name="alert">suspicious_betting</expected>
+        </then>
+    </event>
+
+    <!-- Performance tracking and rule execution monitoring -->
+    <event name="performance_check">
+        <condition>execution_time > threshold</condition>
+        <then>
+            <expected name="action">log_performance_issue</expected>
+            <expected name="alert">performance_degradation</expected>
+        </then>
+    </event>
+
+    <!-- Adaptive game behavior based on player history -->
+    <event name="adaptive_behavior">
+        <condition>consecutive_wins > 5</condition>
+        <then>
+            <expected name="payout_modifier">increase_bonus(5%)</expected>
+        </then>
+    </event>
+
+    <!-- Logging key events and outcomes -->
+    <event name="log_event">
+        <condition>event_triggered == true</condition>
+        <then>
+            <expected name="log">log_event_action(event_name, time, outcome)</expected>
+        </then>
+    </event>
+
+    <!-- Stateful event for transitioning between game phases -->
+    <event name="state_transition">
+        <condition>current_state == 'waiting_for_bet'</condition>
+        <condition>event == 'bet_placed'</condition>
+        <then>
+            <expected name="new_state">cards_dealing</expected>
+        </then>
+    </event>
+
+</rules>

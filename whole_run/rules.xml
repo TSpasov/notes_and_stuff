@@ -1,0 +1,63 @@
+<rules>
+    <!-- Meta data section that describes variables used in the expressions -->
+    <meta name="data">
+        <variable name="bet_value" type="integer" description="The amount of bet placed"/>
+        <variable name="credit" type="integer" description="The current credit amount"/>
+        <variable name="new_credit" type="integer" description="The updated credit after a payout"/>
+        <variable name="player_score" type="integer" description="The player's score"/>
+        <variable name="banker_score" type="integer" description="The banker's score"/>
+        <variable name="payout" type="integer" description="The amount of payout"/>
+    </meta>
+
+    <event name="game_started">
+        <expected name="sound">start new game</expected>
+        <expected name="state">dealing</expected>
+    </event>
+
+
+
+    <event name="bet_placed">
+        <condition>bet_value > 0</condition>
+        <then>
+            <expected name="sound">bet_placed_sound</expected>
+            <expected name="animation">bet_confirmation</expected>
+        </then>
+    </event>
+
+<!--
+
+    <event name="credit_updated">
+        <condition>credit == 350</condition>
+        <then>
+            <expected name="animation">credit_deduction</expected>
+        </then>
+    </event>
+
+
+    <event name="cards_dealt">
+        <condition>player_score > banker_score</condition>
+        <then>
+            <expected name="outcome">player_win</expected>
+            <expected name="animation">card_dealing</expected>
+            <expected name="sound">result_announcement</expected>
+        </then>
+    </event>
+
+
+    <event name="payout_awarded">
+        <condition>AND(EQUAL(payout, 100), EQUAL(new_credit, 550))</condition>
+        <then>
+            <expected name="sound">payout_sound</expected>
+            <expected name="animation">payout_animation</expected>
+        </then>
+    </event>
+
+
+    <event name="round_completed">
+        <condition>EQUAL(new_credit, 550)</condition>
+        <then>
+            <expected name="state">waiting_for_bet</expected>
+        </then>
+    </event>
+-->
+</rules>

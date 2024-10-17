@@ -1,12 +1,12 @@
 ///////  start
 [14.10.24 14:04:14] h1::DeviceMgr: DeviceManager::HandleEvent 3
-[14.10.24 14:04:14] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:14] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:14] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
  CollectedValue->text.get_width() 60.25
  CollectedValue->text.get_wrap_width 0
  CollectedValue->text.get_wrap_width 0
@@ -32,9 +32,9 @@
 [14.10.24 14:04:14] h1::JPM:  P  U 6 FOCUS not_set/off/bcg/alert_off/alert_on/on 1 STATE STACK 0 11 sas.progressive
 [14.10.24 14:04:14] h1::JPM:  CONTEXT N/C/H/K/F/L 0 : 1002 . %2 [%3] Group excluded from configuration
 [14.10.24 14:04:14] h1::JPM: --8--8--8--8--8--8--8--8--8--8--8--8--8--8--8--
-[14.10.24 14:04:14] h1::HAT: MetersCountersSplash::TryToBlock: isBlockCondition=false, is esdMeterServerDisconnect=false
-[14.10.24 14:04:14] h1::HAT: MetersCountersSplash::TryToUnblock: isBlockCondition=false, is esdMeterServerDisconnect=false
-[14.10.24 14:04:14] h1::DeviceMgr: HatKbControlMgr::KbControlMgr::ResetKeyboard: state, credit = 55, 8888
+[14.10.24 14:04:14] h1::AT: MetersCountersSplash::TryToBlock: isBlockCondition=false, is esdMeterServerDisconnect=false
+[14.10.24 14:04:14] h1::AT: MetersCountersSplash::TryToUnblock: isBlockCondition=false, is esdMeterServerDisconnect=false
+[14.10.24 14:04:14] h1::DeviceMgr: ATKbControlMgr::KbControlMgr::ResetKeyboard: state, credit = 55, 8888
 [14.10.24 14:04:14] h1::Games: void MoneyOrCredits::ResetTimer(bool)  MoneyOrCredits STOP RESET TIMER
 [14.10.24 14:04:14] h1::StateMgr: After Notification_II
 [14.10.24 14:04:14] h1::StateMgr: RequestState succeeded
@@ -47,424 +47,424 @@
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:14] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:14] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:14] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:14] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:14] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:14] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:14] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:14] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:14] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:14] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:15] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:15] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:15] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:15] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:15] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:15] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:15] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:15] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:15] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:15] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:15] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:15] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:15] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:15] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:16] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:16] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:16] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:16] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:16] h1::DeviceMgr: HandleEvent 1
 [14.10.24 14:04:16] h1::DeviceMgr: DeviceManager::HandleEvent 2
-[14.10.24 14:04:16] h1::HAT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:16] h1::AT: TSTestInputFramework::HandleEvent fired !
 [14.10.24 14:04:16] h1::DeviceMgr: HandleEvent 1
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:16] h1::GameMgr: Game ID Switch: Set temporary selected gameID = 380
 [14.10.24 14:04:16] h1::GameMgr: Game ID Switch: Set temporary selected gameID = 0 (old was 380)
-[14.10.24 14:04:16] h1::GameMgr: GAME_TO_HAT_MULTIBET_ADD(bet = 20, denom = 2, gameID = 122, trID = 121427)
-[14.10.24 14:04:16] h1::HAT: MetersMgr::Bet(bet = 20, gameID = 122, trID = 121427)
+[14.10.24 14:04:16] h1::GameMgr: GAME_TO_AT_MULTIBET_ADD(bet = 20, denom = 2, gameID = 122, trID = 121427)
+[14.10.24 14:04:16] h1::AT: MetersMgr::Bet(bet = 20, gameID = 122, trID = 121427)
 [14.10.24 14:04:16] h1::DeviceMgr: Lost Command N11CounterCmds10CountMoneyE
-[14.10.24 14:04:16] h1::HAT: MetersMgr::Bet(bet = 20, gameID = 122, trID = 121427, ecrm = 0)
-[14.10.24 14:04:16] h1::HAT: MetersMgr::Bet(gid = 122)
-[14.10.24 14:04:16] h1::HAT: MetersMgr::Bet (gameID < 0) (gid = 122)
-[14.10.24 14:04:16] h1::HAT: MetersMgr::Bet(m_ucTmp = )
-[14.10.24 14:04:16] h1::HAT: Could not update counter currency value: gid = 122 m_uchDenomOffset = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 121
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 121
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 121
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 121
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 121
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 1
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 122
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 2
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 122
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 2
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 122
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 2
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 122
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 2
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 122
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 2
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 123
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 3
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 123
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 3
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 123
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 3
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 123
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 3
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 123
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 3
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 124
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 4
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 124
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 4
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 124
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 4
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 124
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 4
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 124
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 4
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 21
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 5
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 21
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 5
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 21
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 5
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 21
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 5
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 21
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 5
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 5
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 254
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 6
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 5
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 254
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 6
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 5
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 254
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 6
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 5
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 254
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 6
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 5
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 254
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 6
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 440
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 7
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 440
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 7
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 440
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 7
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 440
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 7
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 440
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 7
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 7
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 253
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 8
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 7
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 253
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 8
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 7
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 253
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 8
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 7
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 253
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 8
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 7
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 253
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 8
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 8
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 179
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 9
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 8
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 179
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 9
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 8
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 179
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 9
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 8
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 179
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 9
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 8
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 179
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 9
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 9
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 1
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 0
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 445
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 10
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 9
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 23
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 1
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 445
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 10
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 16
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 9
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 4
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 2
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 445
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 10
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 6
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 9
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 6
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 3
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 445
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 10
-[14.10.24 14:04:16] h1::HAT: ucMachDenomIndex = 15
-[14.10.24 14:04:16] h1::HAT: ucMetersIndex = 9
-[14.10.24 14:04:16] h1::HAT: ucSASDenomCode = 19
-[14.10.24 14:04:16] h1::HAT: ucSelDenomIndex = 4
-[14.10.24 14:04:16] h1::HAT: ucVarIndex = 0
-[14.10.24 14:04:16] h1::HAT: usGameId = 445
-[14.10.24 14:04:16] h1::HAT: usSASGameNumber = 10
-[14.10.24 14:04:16] h1::HAT: MetersMgr::UpdateRawCredit: Value = 20
-[14.10.24 14:04:16] h1::HAT: [MetersMgr::GetTotalCredit] Total credits: 0
-[14.10.24 14:04:16] h1::HAT: [MetersMgr::NotifyForCreditChange] Total credits: 888780
+[14.10.24 14:04:16] h1::AT: MetersMgr::Bet(bet = 20, gameID = 122, trID = 121427, ecrm = 0)
+[14.10.24 14:04:16] h1::AT: MetersMgr::Bet(gid = 122)
+[14.10.24 14:04:16] h1::AT: MetersMgr::Bet (gameID < 0) (gid = 122)
+[14.10.24 14:04:16] h1::AT: MetersMgr::Bet(m_ucTmp = )
+[14.10.24 14:04:16] h1::AT: Could not update counter currency value: gid = 122 m_uchDenomOffset = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 0
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 121
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 0
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 121
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 0
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 121
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 0
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 121
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 0
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 121
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 1
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 1
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 122
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 2
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 1
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 122
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 2
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 1
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 122
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 2
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 1
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 122
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 2
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 1
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 122
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 2
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 2
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 123
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 3
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 2
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 123
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 3
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 2
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 123
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 3
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 2
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 123
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 3
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 2
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 123
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 3
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 3
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 124
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 4
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 3
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 124
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 4
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 3
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 124
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 4
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 3
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 124
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 4
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 3
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 124
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 4
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 4
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 21
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 5
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 4
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 21
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 5
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 4
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 21
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 5
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 4
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 21
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 5
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 4
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 21
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 5
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 5
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 254
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 6
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 5
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 254
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 6
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 5
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 254
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 6
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 5
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 254
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 6
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 5
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 254
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 6
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 6
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 440
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 7
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 6
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 440
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 7
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 6
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 440
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 7
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 6
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 440
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 7
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 6
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 440
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 7
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 7
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 253
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 8
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 7
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 253
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 8
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 7
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 253
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 8
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 7
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 253
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 8
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 7
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 253
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 8
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 8
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 179
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 9
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 8
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 179
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 9
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 8
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 179
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 9
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 8
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 179
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 9
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 8
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 179
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 9
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 9
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 1
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 0
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 445
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 10
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 9
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 23
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 1
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 445
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 10
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 16
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 9
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 4
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 2
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 445
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 10
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 6
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 9
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 6
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 3
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 445
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 10
+[14.10.24 14:04:16] h1::AT: ucMachDenomIndex = 15
+[14.10.24 14:04:16] h1::AT: ucMetersIndex = 9
+[14.10.24 14:04:16] h1::AT: ucSASDenomCode = 19
+[14.10.24 14:04:16] h1::AT: ucSelDenomIndex = 4
+[14.10.24 14:04:16] h1::AT: ucVarIndex = 0
+[14.10.24 14:04:16] h1::AT: usGameId = 445
+[14.10.24 14:04:16] h1::AT: usSASGameNumber = 10
+[14.10.24 14:04:16] h1::AT: MetersMgr::UpdateRawCredit: Value = 20
+[14.10.24 14:04:16] h1::AT: [MetersMgr::GetTotalCredit] Total credits: 0
+[14.10.24 14:04:16] h1::AT: [MetersMgr::NotifyForCreditChange] Total credits: 888780
 [14.10.24 14:04:16] h1::Games: void MoneyOrCredits::ResetTimer(bool)  MoneyOrCredits STOP RESET TIMER
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange begin. TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange into if before Stop. TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:16] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange begin. TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange into if before Stop. TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:16] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:16] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:16] h1::StateMgr: Begin RequestState: MultiplayerBusy(56)
 [14.10.24 14:04:16] h1::ReleaseLogs: RequestState:56
 [14.10.24 14:04:16] h1::StateMgr: Tranistion forward is possible; pushing state: MultiplayerBusy(56)
@@ -486,9 +486,9 @@
 [14.10.24 14:04:16] h1::JPM:  P  U 6 FOCUS not_set/off/bcg/alert_off/alert_on/on 1 STATE STACK 0 11 sas.progressive
 [14.10.24 14:04:16] h1::JPM:  CONTEXT N/C/H/K/F/L 0 : 1002 . %2 [%3] Group excluded from configuration
 [14.10.24 14:04:16] h1::JPM: --8--8--8--8--8--8--8--8--8--8--8--8--8--8--8--
-[14.10.24 14:04:16] h1::HAT: MetersCountersSplash::TryToBlock: isBlockCondition=false, is esdMeterServerDisconnect=false
-[14.10.24 14:04:16] h1::HAT: MetersCountersSplash::TryToUnblock: isBlockCondition=false, is esdMeterServerDisconnect=false
-[14.10.24 14:04:16] h1::DeviceMgr: HatKbControlMgr::KbControlMgr::ResetKeyboard: state, credit = 56, 8887
+[14.10.24 14:04:16] h1::AT: MetersCountersSplash::TryToBlock: isBlockCondition=false, is esdMeterServerDisconnect=false
+[14.10.24 14:04:16] h1::AT: MetersCountersSplash::TryToUnblock: isBlockCondition=false, is esdMeterServerDisconnect=false
+[14.10.24 14:04:16] h1::DeviceMgr: ATKbControlMgr::KbControlMgr::ResetKeyboard: state, credit = 56, 8887
 [14.10.24 14:04:16] h1::Games: void MoneyOrCredits::ResetTimer(bool)  MoneyOrCredits STOP RESET TIMER
 [14.10.24 14:04:16] h1::StateMgr: After Notification_II
 [14.10.24 14:04:16] h1::StateMgr: RequestState succeeded
@@ -501,8 +501,8 @@
 [14.10.24 14:04:16] h1::ReleaseLogs: State stack:0,12,1,55,56
 [14.10.24 14:04:16] h1::StorageMgr: INFO: Fake close transaction. Left subscribers for scope [default]: 1
 [14.10.24 14:04:16] h1::StorageMgr: INFO: Fake close transaction. Left subscribers for scope [default]: 1
-[14.10.24 14:04:16] h1::HAT: H2SystemComponent::requestUpdateViewMsg - requestedPageName=wintable requestTransition=bottom_to_top
-[14.10.24 14:04:16] h1::HAT: H2SystemComponent::requestUpdateViewMsg - sendingPageName=wintable
+[14.10.24 14:04:16] h1::AT: H2SystemComponent::requestUpdateViewMsg - requestedPageName=wintable requestTransition=bottom_to_top
+[14.10.24 14:04:16] h1::AT: H2SystemComponent::requestUpdateViewMsg - sendingPageName=wintable
  CollectedValue->text.get_width() 60.25
  CollectedValue->text.get_wrap_width 0
  CollectedValue->text.get_wrap_width 0
@@ -512,17 +512,17 @@
 [14.10.24 14:04:16] h1::RSS:E: [image][WHEEL_BACKGROUND_DYRVO] was not found in library [[Multigame:2:2][multigame_game_122][RssHash:11808504694714660823]]
 [14.10.24 14:04:16] h1::RSS:E: [image][FOG_BACKGROUND] was not found in library [[Multigame:2:2][multigame_game_122][RssHash:11808504694714660823]]
 [14.10.24 14:04:18] h1::DeviceMgr: DeviceManager::HandleEvent 1
-[14.10.24 14:04:18] h1::HAT: TSTestInputFramework::HandleEvent fired !
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
+[14.10.24 14:04:18] h1::AT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:18] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:18] h1::AT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
+[14.10.24 14:04:18] h1::AT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
+[14.10.24 14:04:18] h1::AT: GSDemoMgr::Wait Start TIP_WAIT:30000
+[14.10.24 14:04:18] h1::AT: GSDemoMgr OnTick::OnCreditChange just exit method. TIP_WAIT:30000
 [14.10.24 14:04:18] h1::DeviceMgr: HandleEvent 1
 client bug: timer event4 debounce short: scheduled expiry is in the past (-10ms), your system is too slow
 [14.10.24 14:04:18] h1::DeviceMgr: DeviceManager::HandleEvent 1
-[14.10.24 14:04:18] h1::HAT: TSTestInputFramework::HandleEvent fired !
-[14.10.24 14:04:18] h1::HAT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
+[14.10.24 14:04:18] h1::AT: TSTestInputFramework::HandleEvent fired !
+[14.10.24 14:04:18] h1::AT: GSDemoMgr OnTick::Stop enter TIP_WAIT:30000
 [14.10.24 14:04:18] h1::HAT: GSDemoMgr OnTick::OnCreditChange after ifs-elses TIP_WAIT:30000
 [14.10.24 14:04:18] h1::HAT: GSDemoMgr::Wait Enter TIP_WAIT:30000 m_state:4
 [14.10.24 14:04:18] h1::HAT: GSDemoMgr::Wait Start TIP_WAIT:30000
@@ -556,6 +556,31 @@ client bug: timer event4 debounce short: scheduled expiry is in the past (-10ms)
 [14.10.24 14:04:18] h1::HAT: CLASS_F Game Win Set To: G 20, P 0
 [14.10.24 14:04:1[14.10.24 14:04:18] h1::HAT: MetersMgr::Bet(gid = 122)8] h1::DeviceMgr: Lost Command N11CounterCmds10CountMoneyE
 [14.10.24 14:04:18] h1::HAT: MetersMgr::Bet(bet = 20, gameID = 122, trID = 121538, ecrm = 3)
+
+// example
+
+[14.10.24 14:05:01] h1::AT: Game started
+[14.10.24 14:05:01] h1::AT: Sound played: game_start_sound
+[14.10.24 14:05:01] h1::AT: Animation started: dealing_animation
+[14.10.24 14:05:01] h1::AT: State changed: dealing
+[14.10.24 14:05:05] h1::AT: Bet placed: 778
+[14.10.24 14:05:05] h1::AT: Sound played: bet_placed_sound
+[14.10.24 14:05:05] h1::AT: Animation started: bet_confirmation
+[14.10.24 14:05:10] h1::AT: Credit updated: 222
+[14.10.24 14:05:10] h1::AT: Animation started: credit_deduction
+[14.10.24 14:05:15] h1::AT: Cards dealt - Player score: 3, Banker score: 1
+[14.10.24 14:05:15] h1::AT: Animation started: card_dealing
+[14.10.24 14:05:18] h1::AT: Outcome: player_win
+[14.10.24 14:05:18] h1::AT: Sound played: result_announcement
+[14.10.24 14:05:22] h1::AT: Payout: 1556
+[14.10.24 14:05:25] h1::AT: New credit after payout: 1778
+[14.10.24 14:05:22] h1::AT: Animation started: payout_animation
+[14.10.24 14:05:22] h1::AT: Sound played: payout_sound
+[14.10.24 14:05:30] h1::AT: Round completed
+[14.10.24 14:05:30] h1::AT: State changed: waiting_for_bet
+
+// example
+
 
 [14.10.24 14:04:18] h1::HAT: MetersMgr::Bet (gameID < 0) (gid = 122)
 [14.10.24 14:04:18] h1::HAT: MetersMgr::Bet(m_ucTmp = )
@@ -805,7 +830,12 @@ client bug: timer event4 debounce short: scheduled expiry is in the past (-10ms)
 [14.10.24 14:04:18] h1::HAT: ucVarIndex = 0
 [14.10.24 14:04:18] h1::HAT: usGameId = 440
 [14.10.24 14:04:18] h1::HAT: usSASGameNumber = 7
+
 [14.10.24 14:04:18] h1::HAT: ucMachDenomIndex = 0
+[14.10.24 14:04:18] h1::AT: State newState = 2
+
+
+
 [14.10.24 14:04:18] h1::HAT: ucMetersIndex = 7
 [14.10.24 14:04:18] h1::HAT: ucSASDenomCode = 1
 [14.10.24 14:04:18] h1::HAT: ucSelDenomIndex = 0
