@@ -1,14 +1,14 @@
 {
     "events": [
       {
-        "name": "game_started",
+        "name": "Game started",
         "expected": [
           "Sound played: start new game",
           "State changed: dealing"
         ]
       },
       {
-        "name": "start_button_pressed",
+        "name": "Input: start_button_pressed",
         "condition": "bet_value > 0",
         "expected": [
           "Sound played: bet_placed_sound",
@@ -43,7 +43,7 @@
         }
       },
       {
-        "name": "payout_awarded",
+        "name": "Animation started: payout_animation",
         "condition": "payout == 100 AND new_credit == 550",
         "expected": [
           "Sound played: payout_sound",
@@ -51,7 +51,7 @@
         ]
       },
       {
-        "name": "round_completed",
+        "name": "Round completed",
         "condition": "new_credit == 550",
         "expected": [
           "State changed: waiting_for_bet"
