@@ -159,11 +159,13 @@ def update_variables(log_file_path, variables):
                     event_name = line.split('::AT: ')[1].strip()
                     # Check if the line contains a variable assignment
                     if '=' in event_name:
-                        variable_name, variable_value = event_name.split('=')
-                        variable_name = variable_name.strip()
-                        variable_value = variable_value.strip()
-                        # Update the variable value in the variables dictionary
-                        variables[variable_name] = variable_value
+                        assignments = event_name.split(',')
+                        for assignment in assignments:
+                            variable_name, variable_value = assignment.split('=')
+                            variable_name = variable_name.strip()
+                            variable_value = variable_value.strip()
+                            # Update the variable value in the variables dictionary
+                            variables[variable_name] = variable_value
     except FileNotFoundError:
         print(f"Error: The file {log_file_path} was not found.")
 
