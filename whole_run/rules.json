@@ -1,59 +1,83 @@
 {
-    "events": [
+    "rules": [
       {
-        "name": "Game started",
-        "expected": [
+        "comment": "Base game start rule",
+        "triger": "Game started",
+        "response": [
           "Sound played: start new game",
           "State changed: dealing"
         ]
       },
       {
-        "name": "Input: start_button_pressed",
-        "condition": "bet_value > 0",
-        "expected": [
-          "Sound played: bet_placed_sound",
-          "Animation started: bet_confirmation"
+        "comment": "Start button is pressed in Betting state",
+        "trigger": "Input: start_button_pressed",
+        "conditions": [
+          {
+            "condition": "bet_value > 0",
+            "response": [
+              "Sound played: bet_placed_sound",
+              "Animation started: bet_confirmation"
+            ]
+          },
+          {
+            "condition": "bet_value == 0",
+            "response": [
+              "Sound played: bet_placed_sound",
+              "Animation started: bet_confirmation"
+            ]
+          },
+          {
+            "condition": "bet_value < 0",
+            "response": [
+              "Sound played: wrong bet value"
+            ]
+          }
         ],
         "else": {
-          "expected": [
+          "response": [
             "Sound played: error"
           ]
-        }
+        },
+        "unconditional_response": [
+          "Sound played: unconditional_sound",
+          "Animation started: unconditional_animation"
+        ]
       },
       {
-        "name": "credit_updated",
+        "comment": "",
+        "triger": "credit_updated",
         "condition": "credit == 350",
-        "expected": [
+        "response": [
           "Animation started: credit_deduction"
         ]
       },
       {
-        "name": "cards_dealt",
-        "condition": "player_score > banker_score",
-        "expected": [
+        "triger": "cards_dealt",
+        "conditions": "player_score > banker_score",
+        "response": [
           "Outcome: player_win",
           "Animation started: card_dealing",
           "Sound played: result_announcement"
         ],
         "else": {
-          "expected": [
+          "response": [
             "Outcome: banker_win",
             "Sound played: banker_win_announcement"
           ]
         }
       },
       {
-        "name": "Animation started: payout_animation",
+        "triger": "Animation started: payout_animation",
         "condition": "payout == 100 AND new_credit == 550",
-        "expected": [
+        "response": [
           "Sound played: payout_sound",
           "Animation started: payout_animation"
         ]
       },
       {
-        "name": "Round completed",
+        "triger": "Round completed",
         "condition": "new_credit == 550",
-        "expected": [
+        "response": [
           "State changed: waiting_for_bet"
         ]
       }

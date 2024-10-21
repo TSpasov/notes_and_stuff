@@ -9,7 +9,7 @@ def extract_variables(rules_file_path):
     try:
         with open(rules_file_path, 'r') as file:
             rules_data = json.load(file)
-            for event in rules_data["events"]:
+            for event in rules_data["rules"]:
                 if "condition" in event:
                     condition = event["condition"]
                     # Extract variable names using regular expressions
@@ -31,8 +31,8 @@ def extract_event_names(rules_file_path):
     try:
         with open(rules_file_path, 'r') as file:
             rules_data = json.load(file)
-            for event in rules_data["events"]:
-                events.append(event["name"])
+            for event in rules_data["rules"]:
+                events.append(event["triger"])
     except FileNotFoundError:
         print(f"Error: The file {rules_file_path} was not found.")
     except json.JSONDecodeError:
@@ -68,7 +68,7 @@ def extract_and_print_event_names(rules_file_path):
         with open(rules_file_path, 'r') as file:
             rules_data = json.load(file)
             print("Event Names:")
-            for event in rules_data["events"]:
+            for event in rules_data["rules"]:
                 print(f"event -> {event['name']}")
     except FileNotFoundError:
         print(f"Error: The file {rules_file_path} was not found.")
@@ -169,7 +169,30 @@ def update_variables(log_file_path, variables):
     except FileNotFoundError:
         print(f"Error: The file {log_file_path} was not found.")
 
-
+def process_json_logic(json_data, variables):
+    # Load JSON data
+    data = json.loads(json_data)
+    
+    # Check trigger (assuming it's always true for this example)
+    if data.get("trigger") == "Input: start_button_pressed":
+        # Iterate through conditions
+        for condition in data.get("conditions", []):
+            # Evaluate condition using variables
+            condition_str = condition["condition"].format(**variables)
+            if eval(condition_str, {}, variables):
+                # Print responses
+                for response in condition["response"]:
+                    print(response)
+                break
+        else:
+            # If no conditions are met, execute else response
+            for response in data.get("else", {}).get("response", []):
+                print(response)
+        
+        # Execute unconditional response
+        for response in data.get("unconditional_response", []):
+            print(response)
+            
 # Main function
 def main():
     rules_file_path = 'rules.json'  # Replace with the actual path to your rules file
@@ -178,10 +201,10 @@ def main():
     read_and_print_rules_file(rules_file_path)
     read_and_print_log_file(log_file_path)
 
-    events = extract_event_names(rules_file_path)
-    print("Event Names:")
-    for event in events:
-        print(event)
+    trigers = extract_event_names(rules_file_path)
+    print("Triger Names:")
+    for triger in trigers:
+        print(triger)
 
 
     variables = extract_variables(rules_file_path)
@@ -190,7 +213,7 @@ def main():
         print(f"{name}: {value}")
 
 
-    parse_log_file(log_file_path, events)
+    parse_log_file(log_file_path, trigers)
 
     update_variables(log_file_path, variables)
 
