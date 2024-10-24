@@ -1,0 +1,305 @@
+24.10.24 17:04:56] h1::AutomationTest: CurrentState : Ready
+[24.10.24 17:05:05] h1::AutomationMode: Enable events: true
+[24.10.24 17:05:05] h1::AutomationMode: Clear All events
+[24.10.24 17:05:05] h1::AutomationMode: Scenario start
+[24.10.24 17:05:05] h1::AutomationMode: Scenario Count : 1
+[24.10.24 17:05:05] h1::AutomationMode: Repeat Scenario: false
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  1597 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 857, y 820
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  89 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  857, y 820
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  91 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 857, y 820
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  97 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  857, y 820
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  66 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 856, y 813
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  5 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Move Event x 856, y 812
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  79 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  856, y 812
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  435 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  82 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  82 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  83 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  66 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  84 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  1062, y 806
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  1403 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Touch Event x 1846, y 1022
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  74 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Move Event x 1846, y 1021
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  14 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Move Event x 1843, y 1021
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  16 ms.
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Move Event x 1842, y 1021
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Untouch Event x  1842, y 1021
+[24.10.24 17:05:05] h1::AutomationMode: [TestScenario] Add Wait Event  1000 ms.
+[24.10.24 17:05:06] h1::AutomationMode: Touch Event Scaled X = 857 Y = 820 Pressed = true
+[24.10.24 17:05:06] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:06] h1::AutomationTest: ClearAll : Ignored
+[24.10.24 17:05:06] h1::AutomationTest: CompleteBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: DoubleBet : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: Rebet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: Start : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: CashOut : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: OverlayTheGame : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ExitGame : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: AutoResizeOn : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: RandomStraight : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowTrack : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowPossibleWin : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowHotCold : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowMinimize : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: HideBets : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: PlaceCrownBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: HideSpecialBets : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: AddSelectedBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: Eraser : Ignored
+[24.10.24 17:05:06] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: 
+GameFeatures 
+
+[24.10.24 17:05:06] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:06] h1::AutomationTest: PreviousState : Ready
+[24.10.24 17:05:06] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:06] h1::AutomationTest: ClearAll : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: CompleteBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: DoubleBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: Rebet : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: Start : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: CashOut : Disabled
+[24.10.24 17:05:06] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: OverlayTheGame : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ExitGame : Disabled
+[24.10.24 17:05:06] h1::AutomationTest: AutoResizeOn : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: RandomStraight : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowTrack : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowPossibleWin : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowHotCold : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowMinimize : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: HideBets : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: PlaceCrownBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: HideSpecialBets : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: AddSelectedBet : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: Eraser : Enabled
+[24.10.24 17:05:06] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:06] h1::AutomationTest: 
+GameFeatures 
+
+[24.10.24 17:05:06] h1::AutomationTest: CurrentState : Gamble
+ BillAcceptorDevice::Enable   
+[24.10.24 17:05:07] h1::AutomationMode: Touch Event Scaled X = 857 Y = 820 Pressed = false
+[24.10.24 17:05:07] h1::AutomationMode: Touch Event Scaled X = 857 Y = 820 Pressed = true
+[24.10.24 17:05:07] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:07] h1::AutomationMode: Touch Event Scaled X = 857 Y = 820 Pressed = false
+[24.10.24 17:05:07] h1::AutomationMode: Touch Event Scaled X = 856 Y = 813 Pressed = true
+[24.10.24 17:05:07] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:07] h1::AutomationMode: Touch Event Scaled X = 856 Y = 812 Pressed = false
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = true
+[24.10.24 17:05:08] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = false
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = true
+[24.10.24 17:05:08] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = false
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = true
+[24.10.24 17:05:08] h1::AutomationTest: PlaySound : BET
+[24.10.24 17:05:08] h1::AutomationMode: Touch Event Scaled X = 1062 Y = 806 Pressed = false
+[24.10.24 17:05:10] h1::AutomationMode: Touch Event Scaled X = 1846 Y = 1022 Pressed = true
+[24.10.24 17:05:10] h1::AutomationMode: Touch Event Scaled X = 1842 Y = 1021 Pressed = false
+[24.10.24 17:05:10] h1::AutomationTest: GameAction : Start
+[24.10.24 17:05:10] h1::AutomationTest:  Bet : 14
+[24.10.24 17:05:10] h1::AutomationTest:  Totalcredits : 19986
+ BillAcceptorDevice::Disable   
+[24.10.24 17:05:10] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:10] h1::AutomationTest: ClearAll : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: CompleteBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: DoubleBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: Rebet : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: Start : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: CashOut : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: OverlayTheGame : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ExitGame : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: AutoResizeOn : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: RandomStraight : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowTrack : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowPossibleWin : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowHotCold : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowMinimize : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: HideBets : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: PlaceCrownBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: HideSpecialBets : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: AddSelectedBet : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: Eraser : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: 
+GameFeatures 
+
+[24.10.24 17:05:10] h1::AutomationTest: PreviousState : Gamble
+[24.10.24 17:05:10] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:10] h1::AutomationTest: ClearAll : Ignored
+[24.10.24 17:05:10] h1::AutomationTest: CompleteBet : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: DoubleBet : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: Rebet : Ignored
+[24.10.24 17:05:10] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: Start : Ignored
+[24.10.24 17:05:10] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: CashOut : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: OverlayTheGame : Ignored
+[24.10.24 17:05:10] h1::AutomationTest: ExitGame : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: AutoResizeOn : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: RandomStraight : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowTrack : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowPossibleWin : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowHotCold : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowMinimize : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: HideBets : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: PlaceCrownBet : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: HideSpecialBets : Enabled
+[24.10.24 17:05:10] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: AddSelectedBet : Disabled
+[24.10.24 17:05:10] h1::AutomationTest: Eraser : Ignored
+[24.10.24 17:05:10] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:10] h1::AutomationTest: 
+GameFeatures 
+
+[24.10.24 17:05:10] h1::AutomationTest: CurrentState : Playing
+[24.10.24 17:05:11] h1::AutomationTest: PlaySound : LAUNCH_BALL_SOUND
+[24.10.24 17:05:11] h1::AutomationMode: Action Play Recorded Events Finished, reset and go to next action
+[24.10.24 17:05:11] h1::AutomationMode: Test Scenario Ends!
+[24.10.24 17:05:11] h1::AutomationMode: Enable events: false
+[24.10.24 17:05:11] h1::AutomationMode: Scenario stop
+[24.10.24 17:05:11] h1::AutomationTest: PlaySound : BALL_SPINNING_SOUND
+[24.10.24 17:05:20] h1::AutomationTest: PlaySound : BALL_ENTER_WHEEL_SOUND
+[24.10.24 17:05:20] h1::AutomationTest: PlaySound : BALL_BOUNCE_SOUND
+[24.10.24 17:05:23] h1::AutomationTest: PreviousState : Playing
+[24.10.24 17:05:23] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:23] h1::AutomationTest: ClearAll : Ignored
+[24.10.24 17:05:23] h1::AutomationTest: CompleteBet : Disabled
+[24.10.24 17:05:23] h1::AutomationTest: DoubleBet : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: Rebet : Ignored
+[24.10.24 17:05:23] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:23] h1::AutomationTest: Start : Ignored
+[24.10.24 17:05:23] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:23] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: CashOut : Disabled
+[24.10.24 17:05:23] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:23] h1::AutomationTest: OverlayTheGame : Ignored
+[24.10.24 17:05:23] h1::AutomationTest: ExitGame : Disabled
+[24.10.24 17:05:23] h1::AutomationTest: AutoResizeOn : Locked
+[24.10.24 17:05:23] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: RandomStraight : Disabled
+[24.10.24 17:05:23] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: ShowTrack : Locked
+[24.10.24 17:05:23] h1::AutomationTest: ShowPossibleWin : Locked
+[24.10.24 17:05:23] h1::AutomationTest: ShowHotCold : Locked
+[24.10.24 17:05:23] h1::AutomationTest: ShowMinimize : Locked
+[24.10.24 17:05:23] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: HideBets : Locked
+[24.10.24 17:05:23] h1::AutomationTest: PlaceCrownBet : Locked
+[24.10.24 17:05:23] h1::AutomationTest: HideSpecialBets : Locked
+[24.10.24 17:05:23] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: AddSelectedBet : Disabled
+[24.10.24 17:05:23] h1::AutomationTest: Eraser : Ignored
+[24.10.24 17:05:23] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:23] h1::AutomationTest: 
+GameFeatures 
+
+ BillAcceptorDevice::Enable   
+[24.10.24 17:05:23] h1::AutomationTest:  Win : 14
+[24.10.24 17:05:23] h1::AutomationTest:  Totalcredits : 20000
+ BillAcceptorDevice::Disable   
+[24.10.24 17:05:23] h1::AutomationTest: CurrentState : Finalizing
+ BillAcceptorDevice::Enable   
+[24.10.24 17:05:28] h1::AutomationTest: PreviousState : Finalizing
+[24.10.24 17:05:28] h1::AutomationTest: GameFeatures 
+
+[24.10.24 17:05:28] h1::AutomationTest: ClearAll : Ignored
+[24.10.24 17:05:28] h1::AutomationTest: CompleteBet : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: DoubleBet : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: FastStop : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: Rebet : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: SelectBet : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: Start : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: StartAutoPlay : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: StopAutoPlay : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: CashOut : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: HideTheGame : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: OverlayTheGame : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ExitGame : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: AutoResizeOn : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: AutoResizeOff : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: RandomStraight : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: SelectDynamicPaytable : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: ShowTapi : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: ShowTrack : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ShowPossibleWin : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ShowHotCold : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ShowMinimize : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ShowMaximize : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: HideBets : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: PlaceCrownBet : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: HideSpecialBets : Enabled
+[24.10.24 17:05:28] h1::AutomationTest: ShowTableInsideTrack : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: ShowGroupsInsideTrack : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: AddSelectedBet : Disabled
+[24.10.24 17:05:28] h1::AutomationTest: Eraser : Ignored
+[24.10.24 17:05:28] h1::AutomationTest: CompleteBetToggle : Hidden
+[24.10.24 17:05:28] h1::AutomationTest: 
+GameFeatures 
+
+[24.10.24 17:05:28] h1::AutomationTest: CurrentState : Ready
+

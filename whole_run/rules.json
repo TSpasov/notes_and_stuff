@@ -1,35 +1,47 @@
 {
+    "vars": {
+      "credit": "int",
+      "payout": "int",
+      "new_credit": "int",
+      "bet_value": "int",
+      "Credit updated": "int",
+      "player_score": "int",
+      "banker_score": "int",
+      "Payout": "int",
+      "New credit after payout": "int",
+      "Player_score": "int",
+      "Banker_score": "int",   
+      "is_dolly_enabled": "bool" 
+    },
     "rules": [
       {
-        "comment": "Base game start rule",
-        "triger": "Game started",
+        "trigger": "Game started",
         "response": [
+          "Sound played: start new game",          
+          "State changed: dealing",
+          "F3",
+          "State changed: dealing",
           "Sound played: start new game",
           "State changed: dealing"
         ]
       },
       {
-        "comment": "Start button is pressed in Betting state",
         "trigger": "Input: start_button_pressed",
         "conditions": [
           {
-            "condition": "bet_value > 0",
+            "condition": "is_dolly_enabled == True",
             "response": [
               "Sound played: bet_placed_sound",
-              "Animation started: bet_confirmation"
+              "Animation started: bet_confirmation",
+              "State changed: dealing"
             ]
           },
           {
             "condition": "bet_value == 0",
             "response": [
               "Sound played: bet_placed_sound",
-              "Animation started: bet_confirmation"
-            ]
-          },
-          {
-            "condition": "bet_value < 0",
-            "response": [
-              "Sound played: wrong bet value"
+              "Sound played: bet_error_sound",
+              "Animation started: bet_again"
             ]
           }
         ],
@@ -39,20 +51,24 @@
           ]
         },
         "unconditional_response": [
-          "Sound played: unconditional_sound",
-          "Animation started: unconditional_animation"
-        ]
+          "Sound played: gggo",
+          "Animation started: ooo"
+        ],
+        "comment": ""
       },
       {
-        "comment": "",
-        "triger": "credit_updated",
-        "condition": "credit == 350",
+        "name": "",
+        "trigger": "credit_updated",
+        "conditions": [
+        {"condition": "credit == 10",
         "response": [
           "Animation started: credit_deduction"
         ]
+        }
+        ]
       },
       {
-        "triger": "cards_dealt",
+        "trigger": "Animation started: cards_dealt",
         "conditions": "player_score > banker_score",
         "response": [
           "Outcome: player_win",
@@ -67,15 +83,15 @@
         }
       },
       {
-        "triger": "Animation started: payout_animation",
-        "condition": "payout == 100 AND new_credit == 550",
+        "trigger": "Animation started: payout_animation",
+        "condition": "payout == 100 and new_credit == 550",
         "response": [
           "Sound played: payout_sound",
           "Animation started: payout_animation"
         ]
       },
       {
-        "triger": "Round completed",
+        "trigger": "Round completed",
         "condition": "new_credit == 550",
         "response": [
           "State changed: waiting_for_bet"
