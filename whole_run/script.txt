@@ -1,0 +1,18 @@
+trigger-> Input: start_button_pressed
+if is_dolly_enabled == True:
+    response:
+        - Sound played: bet_placed_sound
+        - Animation started: bet_confirmation
+        - State changed: dealing
+elif bet_value == 0:
+    response:
+        - Sound played: bet_placed_sound
+        - Sound played: bet_error_sound
+        - Animation started: bet_again
+else:
+    response:
+        - Sound played: error
+
+response:
+    - Sound played: gggo
+    - Animation started: ooo

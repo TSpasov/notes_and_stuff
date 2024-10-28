@@ -2,10 +2,13 @@ import json
 import ast
 import re
 
+
+AT_PREFIX = '::AutomationTest:'
+
 # Function to extract variables from the conditions
 def extract_variables(rules_file_path):
     variables = {}
-    valid_operators = ['>', '<', '==', 'AND', 'OR', '<=', '>=', '+', '-', '*', '/']
+    valid_operators = ['>', '<', '==', 'and', 'or', '<=', '>=', '+', '-', '*', '/']
     logical_constants = ['TRUE', 'FALSE']
     try:
         with open(rules_file_path, 'r') as file:
@@ -100,9 +103,9 @@ def parse_log_file(log_file_path, events):
         with open(log_file_path, 'r') as file:
             for line in file:
                 line = line.strip()
-                if line.startswith('['):
+                if AT_PREFIX in line:
                     # Extract the event name from the log line
-                    event_name = line.split('::AT: ')[1].strip()
+                    event_name = line.split(AT_PREFIX)[1].strip()
                     if event_name in events:
                         # If the event is in the events list, start a new scope
                         if len(current_scope) != 0:
@@ -135,13 +138,13 @@ def update_variables(log_file_path, variables):
             for line in file:
                 line = line.strip()
                 # Remove the timestamp and the "h1::AT:" prefix from the log line
-                if '::AT: ' in line:
-                    event_name = line.split('::AT: ')[1].strip()
+                if AT_PREFIX in line:
+                    event_name = line.split(AT_PREFIX)[1].strip()
                     # Check if the line contains a variable assignment
-                    if '=' in event_name:
+                    if ':' in event_name:
                         assignments = event_name.split(',')
                         for assignment in assignments:
-                            variable_name, variable_value = assignment.split('=')
+                            variable_name, variable_value = assignment.split(':')
                             variable_name = variable_name.strip()
                             variable_value = variable_value.strip()
                             # Update the variable value in the variables dictionary
@@ -152,7 +155,7 @@ def update_variables(log_file_path, variables):
 def read_variable(logEntry, variables):
     assignments = logEntry.split(',')
     for assignment in assignments:
-        variable_name, variable_value = assignment.split('=')
+        variable_name, variable_value = assignment.split(':')
         variable_name = variable_name.strip()
         variable_value = variable_value.strip()
         if variable_name in variables:
@@ -164,7 +167,8 @@ def evaluate_expression(expression, variables):
         result = eval(expression, {}, variables)
         return result
     except Exception as e:
-        return str(e)
+        print(e)
+        return False
 
 
 
@@ -249,8 +253,8 @@ def process_log(log_file_path, variables, triggers):
             for line in file:
                 line = line.strip()
                 # Remove the timestamp and the "h1::AT:" prefix from the log line
-                if '::AT: ' in line:
-                    logEntry = line.split('::AT: ')[1].strip()
+                if AT_PREFIX in line:
+                    logEntry = line.split(AT_PREFIX)[1].strip()
                     if '=' in logEntry:
                         read_variable(logEntry, variables)
                     elif logEntry in triggers:
@@ -264,38 +268,39 @@ def process_log(log_file_path, variables, triggers):
 # Main function
 def main():
     rules_file_path = 'rules.json'  # Replace with the actual path to your rules file
-    log_file_path = 'log_json.txt'      # Replace with the actual path to your log file
+    log_file_path = 'roulette.log'      # Replace with the actual path to your log file
 
     # read_and_print_rules_file(rules_file_path)
     # read_and_print_log_file(log_file_path)
 
     triggers = extract_event_names(rules_file_path)
-    # print("trigger Names:")
-    # for trigger in triggers:
-    #     print(trigger)
+    print("trigger Names:")
+    for trigger in triggers:
+        print(trigger)
 
     variables = extract_variables(rules_file_path)
     for name, value in variables.items():
+        print("Variables")
         print(f"{name}: {value}")
         
     # process_log(log_file_path, variables, triggers)
     # for name, value in variables.items():
     #     print(f"{name}: {value}")
 
-    parse_log_file(log_file_path, triggers)
+    # parse_log_file(log_file_path, triggers)
 
-    update_variables(log_file_path, variables)
+    # update_variables(log_file_path, variables)
 
     # # Print the updated variables dictionary
-    print("Updated Variables:")
+    # print("Updated Variables:")
 
 
-    print("Conditions:\n")
+    # print("Conditions:\n")
  
 
 
-    for trigger in triggers:
-        process_json_logic(rules_file_path, {"trigger": trigger, **variables})
+    # for trigger in triggers:
+    #     process_json_logic(rules_file_path, {"trigger": trigger, **variables})
 
     
     
