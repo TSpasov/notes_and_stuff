@@ -1,18 +1,32 @@
-trigger-> Input: start_button_pressed
-if is_dolly_enabled == True:
-    response:
-        - Sound played: bet_placed_sound
-        - Animation started: bet_confirmation
-        - State changed: dealing
-elif bet_value == 0:
-    response:
-        - Sound played: bet_placed_sound
-        - Sound played: bet_error_sound
-        - Animation started: bet_again
-else:
-    response:
-        - Sound played: error
 
-response:
+? this is comment 
+
+begin_trigger Input: start_button_pressed
+
+begin_condition
+    if is_dolly_enabled == True
+            - Sound played: bet_placed_sound
+            - Animation started: bet_confirmation
+            - State changed: dealing
+
+    elif bet_value == 0
+            - Sound played: bet_placed_sound
+            - Sound played: bet_error_sound
+            - Animation started: bet_again
+    else
+            - Sound played: error
+end_condtion
+
+begin_condition
+    if rrr == True
+            - rrr everyone
+    else
+            - rr is not true
+end_condtion
+
+begin_unconditional
     - Sound played: gggo
     - Animation started: ooo
+end_unconditional
+
+end_trigger
