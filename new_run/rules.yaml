@@ -1,0 +1,31 @@
+- trigger: "start_button_pressed"
+  conditions:
+    - if: "is_dolly_enabled == true"
+      then:
+        - sound: bet_placed_sound
+        - animation: bet_confirmation
+        - state: dealing
+      followed_by:
+        - trigger: "CurrentState : Ready"
+
+    - elif: "bet_value == 0"
+      then:
+        - sound: bet_placed_sound
+        - sound: bet_error_sound
+        - animation: bet_again
+      followed_by:
+        - trigger: "BetPrompt : Retry"
+
+    - else:
+        - sound: error
+      followed_by:
+        - trigger: "ErrorHandled : True"
+
+  unconditional:
+    - sound: click
+    - animation: pulse
+
+  assert:
+    - description: "Credit updated correctly after round"
+      formula: "end_credit == start_credit - bet + win"
+

@@ -217,7 +217,7 @@
 [25.10.24 15:48:03] h1::AutomationTest: CompleteBetToggle : Hidden
 [25.10.24 15:48:03] h1::AutomationTest: GameFeatures 
 
-[25.10.24 15:48:03] h1::AutomationTest: PreviousState : Idle
+[25.10.24 15:48:03] h1::AutomationTest: PreviousState : 
 [25.10.24 15:48:03] h1::AutomationTest: PlaySound : BET_PLEASE_SOUND_STANDALONE
 [25.10.24 15:48:03] h1::AutomationTest: GameFeatures 
 
