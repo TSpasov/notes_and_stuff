@@ -7,7 +7,9 @@ class EvaluationResult:
         self.trigger = trigger
         self.passed = True
         self.missing_responses: List[str] = []
+        self.unexpected_responses: List[str] = []
         self.failed_assertions: List[str] = []
+        self.execution_errors: List[str] = []
         self.missing_followed_by: List[str] = []
 
     def fail(self, reason: str):
@@ -26,52 +28,71 @@ class Evaluator:
             result.fail("No rule defined for trigger")
             return result
 
+        # Prepare working variable map
+        variable_map = event.start_state.copy()
+
+        # Execute assignments
+        for step in rule.execute:
+            try:
+                exec(step.formula, {}, variable_map)
+            except Exception as e:
+                result.fail(f"Execution error ({step.description}): {e}")
+                result.execution_errors.append(step.description)
+
         # Evaluate condition block
         selected_block = None
         for block in rule.conditions:
             if block.condition is None:
-                continue  # handle else later
+                continue
             try:
-                if eval(block.condition, {}, event.start_state):
+                if eval(block.condition, {}, variable_map):
                     selected_block = block
                     break
             except Exception as e:
-                result.fail(f"Condition error: {e}")
+                result.fail(f"Condition evaluation error: {e}")
                 return result
 
         if not selected_block:
             for block in rule.conditions:
-                if block.condition is None:  # else block
+                if block.condition is None:
                     selected_block = block
                     break
 
-        # Check responses from selected block
-        expected = (selected_block.responses if selected_block else []) + rule.unconditional
+        # Check expected responses from the selected block
+        expected = (selected_block.responses if selected_block else []) + rule.always
         for response in expected:
             expected_line = f"{response.type}: {response.value}"
             if not any(expected_line in line for line in event.buffer):
                 result.fail(f"Missing response: {expected_line}")
                 result.missing_responses.append(expected_line)
 
-        # Check followed_by
+        # Check forbidden responses from unmatched blocks and 'never'
+        all_possible = [r for cond in rule.conditions if cond != selected_block for r in cond.responses] + rule.never
+        for response in all_possible:
+            unexpected_line = f"{response.type}: {response.value}"
+            if any(unexpected_line in line for line in event.buffer):
+                result.fail(f"Unexpected response: {unexpected_line}")
+                result.unexpected_responses.append(unexpected_line)
+
+        # Check followed_by from selected block
         if selected_block and selected_block.followed_by:
-            if not any(fb in [e.trigger for e in self.rules.values()] for fb in selected_block.followed_by):
-                result.fail(f"Missing followed_by trigger(s): {selected_block.followed_by}")
-                result.missing_followed_by.extend(selected_block.followed_by)
+            next_triggers = [e.trigger for e in self.rules.values()]
+            for fb in selected_block.followed_by:
+                if fb not in next_triggers:
+                    result.fail(f"Missing followed_by trigger: {fb}")
+                    result.missing_followed_by.append(fb)
 
         # Evaluate assertions
-        current_state = event.buffer[-1] if event.buffer else {}
-        for formula in rule.assertions:
+        for assertion in rule.assertions:
             try:
-                if not eval(formula, {}, {**event.start_state, **current_state}):
-                    result.fail(f"Assertion failed: {formula}")
-                    result.failed_assertions.append(formula)
+                if not eval(assertion.formula, {}, variable_map):
+                    result.fail(f"Assertion failed: {assertion.description}")
+                    result.failed_assertions.append(assertion.description)
             except Exception as e:
-                result.fail(f"Assertion error: {e}")
-                result.failed_assertions.append(formula)
+                result.fail(f"Assertion error ({assertion.description}): {e}")
+                result.failed_assertions.append(assertion.description)
 
         return result
 
     def evaluate_all(self, events: List[LogEvent]) -> List[EvaluationResult]:
         return [self.evaluate_event(event) for event in events]
-

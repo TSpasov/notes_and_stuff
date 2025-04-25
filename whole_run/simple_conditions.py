@@ -206,4 +206,7 @@ context = {
 
 parsed_script = parse_script(script)
 evaluate_conditions(parsed_script, context)
-print(parsed_script)
+
+for i in parsed_script:
+    print(i)
+    print("\n")

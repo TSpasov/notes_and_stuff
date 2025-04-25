@@ -10,6 +10,16 @@ class Response:
     value: str
 
 @dataclass
+class Execute:
+    description: str
+    formula: str
+
+@dataclass
+class Assertion:
+    description: str
+    formula: str
+
+@dataclass
 class ConditionBlock:
     condition: Optional[str]  # the 'if' or 'elif' expression; None if it's 'else'
     responses: List[Response]
@@ -19,8 +29,10 @@ class ConditionBlock:
 class Rule:
     trigger: str
     conditions: List[ConditionBlock] = field(default_factory=list)
-    unconditional: List[Response] = field(default_factory=list)
-    assertions: List[str] = field(default_factory=list)
+    always: List[Response] = field(default_factory=list)
+    never: List[Response] = field(default_factory=list)
+    execute: List[Execute] = field(default_factory=list)
+    assertions: List[Assertion] = field(default_factory=list)
 
 # === Parsing functions ===
 
@@ -38,10 +50,7 @@ def parse_rules(yaml_file_path: str) -> List[Rule]:
     rules = []
 
     # If rules are provided as a list
-    if isinstance(raw_rules, list):
-        rule_blocks = raw_rules
-    else:
-        rule_blocks = [raw_rules]
+    rule_blocks = raw_rules if isinstance(raw_rules, list) else [raw_rules]
 
     for block in rule_blocks:
         trigger = block.get('trigger')
@@ -53,21 +62,22 @@ def parse_rules(yaml_file_path: str) -> List[Rule]:
             followed_by = [f["trigger"] for f in cond.get('followed_by', [])]
             rule.conditions.append(ConditionBlock(condition=cond_expr, responses=responses, followed_by=followed_by))
 
-        if 'else' in cond:
-            responses = [parse_response_line(r) for r in cond['else']]
-            followed_by = [f["trigger"] for f in cond.get('followed_by', [])]
-            rule.conditions.append(ConditionBlock(condition=None, responses=responses, followed_by=followed_by))
+            if 'else' in cond:
+                responses = [parse_response_line(r) for r in cond['else']]
+                followed_by = [f["trigger"] for f in cond.get('followed_by', [])]
+                rule.conditions.append(ConditionBlock(condition=None, responses=responses, followed_by=followed_by))
 
-        rule.unconditional = [parse_response_line(r) for r in block.get('unconditional', [])]
+        rule.always = [parse_response_line(r) for r in block.get('always', [])]
+        rule.never = [parse_response_line(r) for r in block.get('never', [])]
 
-        if 'assert' in block:
-            if isinstance(block['assert'], list):
-                rule.assertions = [a['formula'] if isinstance(a, dict) else a for a in block['assert']]
-            else:
-                rule.assertions = [block['assert']]
+        for exe in block.get('execute', []):
+            if isinstance(exe, dict):
+                rule.execute.append(Execute(description=exe['description'], formula=exe['formula']))
+
+        for assertion in block.get('assert', []):
+            if isinstance(assertion, dict):
+                rule.assertions.append(Assertion(description=assertion['description'], formula=assertion['formula']))
 
         rules.append(rule)
 
     return rules
-
-
